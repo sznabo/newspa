@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*  素材管理样式  */
+body{ width:100%; height:100%; margin:0; padding:0; font-family:"微软雅黑";}
+.Program{ margin:10px auto; width:1300px; height:600px; background:#499fed; overflow:hidden; min-width:1000px; _width:expression(document.body.clientWidth < 1000 ? "1000px" : "auto"); }
+
+/*   头部导航   */
+.ProgramTop{ margin:0 auto; height:50px; width:100%; position:relative; }
+.ProgramTop img{ border:0; margin:0; padding:0;}
+.ProgramTop1{ margin:0; width:12px; position:absolute; top:0; left:0;  height:50px;}
+.ProgramTop2{ margin:0; background:url(../images/TopColumn2.png) repeat-x; padding:8px 0; height:38px; line-height:35px; width:98.7%; overflow:hidden; position:absolute; top:0; left:12px;}
+.ProgramTop2 ul{ margin:0; list-style-type:none; padding:0;}
+.ProgramTop2 li{ margin:0 auto; float:left; width:35px; font-size:15px; text-align:center; height:33px;}
+.ProgramTop2 img{ margin:0; width:22px; height:22px; border:0; vertical-align:middle;}
+.ProgramTop3{ margin:0; width:15px; height:50px; position:absolute; top:0; right:0;}
+.Program_Body{ margin:10px auto 0; height:510px; width:98.5%; background:#FFF;}

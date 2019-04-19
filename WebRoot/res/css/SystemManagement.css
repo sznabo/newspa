@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+.SystemPage{ margin:15px auto 0; width:98%; min-width:550px; border-collapse:collapse; text-align:center; font-size:13px; color:#888888; padding:4px 0; position:absolute; bottom:8px;}
+.SystemPage span{ margin:0 13px; font-size:15px;}
+.SystemPage a img{ border:0;}
+.SystemPage a.After{ color:#ccd0d3;}
+.SystemPage a:hover.After{ color:#ccd0d3;}
+.SystemPage a{ text-decoration:none; margin:0 7px; color:#888888;}
+.SystemPage a:hover{ text-decoration:none; margin:0 7px; color:#999999;}
+
+
+

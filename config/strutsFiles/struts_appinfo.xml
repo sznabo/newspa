@@ -1,0 +1,41 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="appInfo" extends="karaoke" namespace="/appInfo">
+		
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="AppInfoAction" method="toAdd">
+			<result name="success">/jsp/appinfo/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="AppInfoAction" method="save">
+			<result name="input">/jsp/appinfo/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="AppInfoAction" method="toUpdate">
+			<result name="success" >/jsp/appinfo/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="AppInfoAction" method="update">
+			<result name="input">/jsp/appinfo/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="AppInfoAction" method="findPage">
+			<result name="success">/jsp/appinfo/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="AppInfoAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+	</package>
+</struts>

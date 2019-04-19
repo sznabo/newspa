@@ -1,0 +1,196 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+		<!-- 指定默认编码集 ，作用于HttpServletRequest的setCharacterEncoding（）和freemarker，vilocity的输出 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+		<!-- 当struts配置文件修改时是否自动加载 -->
+	<constant name="struts.configuration.xmlreload" value="true" />
+		<!-- 开发模式下打印详细的错误信息 -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.locale" value="zh_CN"/>
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 修改action访问后缀 -->
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<constant name="struts.objectFactory.spring.autoWire" value="type" />
+	<!-- 设置上传限制大小为10M -->
+	<constant name="struts.multipart.maxSize" value="1048576000"/>
+	<!-- 设置上传文件的临时文件夹,默认使用javax.servlet.context.tempdir -->
+    <!-- <constant name="struts.multipart.saveDir " value="res/upload" /> -->
+    <constant name="struts.ognl.allowStaticMethodAccess " value="true" />
+
+	<!-- 设置Struts2的国际化资源文件，多个文件中间用逗号隔开 -->
+	<!-- <constant name="struts.custom.i18n.resources" value="resource.properties" /> -->
+    <!--<constant name="struts.xwork.chaining.copyErrors" value="true" />
+    <constant name="struts.xwork.chaining.copyFieldErrors" value="true" />
+    <constant name="struts.xwork.chaining.copyMessages" value="true" />
+	-->
+	
+	<package name="karaoke" extends="json-default" namespace="/karaoke">
+		<result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+		
+		<interceptors>
+			<interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+            <interceptor name="jsonValidation" class="org.apache.struts2.json.JSONValidationInterceptor"/>
+
+			<!-- 权限控制 -->
+			<interceptor name="webAuthority" class="com.boyue.karaoke.web.interceptor.WebAuthInteceptor" />
+			<interceptor name="trimParameter" class="com.boyue.framework.web.interceptor.TrimParameterInterceptor" />
+			<!-- 自动文件上传拦截器，要配合标签使用 -->
+			<interceptor name="autoFileUpload" class="com.boyue.framework.web.interceptor.MyFileUploadInterceptor" />
+			<!-- 系统日志 -->
+			<interceptor name="sysLog" class="com.boyue.karaoke.web.interceptor.LogInterceptor" />
+			
+			 <!-- Sample JSON validation stack -->
+            <interceptor-stack name="jsonValidationWorkflowStack">
+                <interceptor-ref name="basicStack"/>
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">input,back,cancel</param>
+                </interceptor-ref>
+                <interceptor-ref name="jsonValidation"/>
+                <interceptor-ref name="workflow"/>
+            </interceptor-stack>
+			
+			<!-- 要登陆验证的拦截器 -->
+			<interceptor-stack name="adWebStack">
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param> 
+				    <param name="logLevel">error</param> 
+				</interceptor-ref>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="autoFileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="multiselect"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="params">
+                    <param name="excludeParams">^class\..*,^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+                </interceptor-ref>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="deprecation"/>
+				<interceptor-ref name="json" />
+				<interceptor-ref name="trimParameter" />
+				<interceptor-ref name="webAuthority" />
+				<interceptor-ref name="sysLog" />
+			</interceptor-stack>
+			
+			<!-- 不带权限验证的 -->
+			<interceptor-stack name="adWebNoPermStack">
+				<interceptor-ref name="defaultStack">
+					 <param name="exception.logEnabled">true</param> 
+				     <param name="exception.logLevel">error</param> 
+				</interceptor-ref>
+				<interceptor-ref name="json" />
+				<interceptor-ref name="trimParameter" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="adWebStack" />
+		
+		<global-results>
+			<result type="json" name="global_ajax_response">
+				<param name="root">ajaxResponse</param>
+			</result>
+			<result name="exception">/jsp/exception.jsp</result>
+			
+			<result name="web_login">/jsp/adminlogin.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			 <exception-mapping exception="java.lang.Exception" result="exception" /> 
+		</global-exception-mappings>
+	</package>
+	
+	<!-- 加载struts配置文件 -->
+	<include file="struts_remote.xml" />
+	<include file="strutsFiles/struts_index.xml" />
+	<include file="strutsFiles/struts_admin.xml" />
+	<include file="strutsFiles/struts_device.xml" />
+	<include file="strutsFiles/struts_message.xml" />
+	<include file="strutsFiles/struts_soft.xml" />
+	<include file="strutsFiles/struts_softupdate.xml" />
+	<include file="strutsFiles/struts_device_category.xml" />
+	<include file="strutsFiles/struts_song.xml" />
+	<include file="strutsFiles/struts_song_category.xml" />
+	<include file="strutsFiles/struts_product.xml" />
+	<include file="strutsFiles/struts_appinfo.xml" />
+	<include file="strutsFiles/struts_ad.xml" />
+	<include file="strutsFiles/struts_ad_detail.xml" />
+	<include file="strutsFiles/struts_syslog.xml" />
+	<include file="strutsFiles/struts_song_stat.xml" />
+	<!-- 后台点播管理 -->
+	<include file="strutsFiles/struts_vod.xml" />
+	<!-- 后台直播管理 -->
+	<include file="strutsFiles/struts_live.xml"/>
+	<!-- 后台留言管理(旧)
+	<include file="strutsFiles/struts_guestbook.xml"/>
+	 -->
+	<!-- 后台本店介绍 -->
+	<include file="strutsFiles/struts_shopintroduce.xml"/>
+	<!-- 后台留言管理 （新）-->
+	<include file="strutsFiles/struts_servermsg.xml"/>
+	<!-- 后台呼叫-->
+	<include file="strutsFiles/struts_calling.xml"/>
+	<!-- 后台城市更新-->
+	<include file="strutsFiles/struts_updatecity.xml"/>
+	<include file="strutsFiles/struts_shopintroduceview.xml"/>
+	<!-- 直播单模-->
+	<include file="strutsFiles/struts_SingelLive.xml"/>
+	<!-- 叫醒服务-->
+	<include file="strutsFiles/struts_wakeUpCall.xml"/>
+	<!-- 技师浏览-->
+	<include file="strutsFiles/struts_technician.xml"/>
+	<!-- 技师类型-->
+	<include file="strutsFiles/struts_technicianType.xml"/>
+	<!-- 技师级别-->
+	<include file="strutsFiles/struts_technicianLevel.xml"/>
+	<!-- 菜品-->
+	<include file="strutsFiles/struts_dish.xml"/>
+	<!-- 菜品分类-->
+	<include file="strutsFiles/struts_dishStyle.xml"/>
+	<!-- 总服务器信息-->
+	<include file="strutsFiles/struts_cloundsManage.xml"/>
+	<!-- 应用分类-->
+	<include file="strutsFiles/struts_appCategory.xml"/>
+	<!-- 直播分类-->
+	<include file="strutsFiles/struts_LiveCategory.xml"/>
+	<!-- 关于我们-->
+	<include file="strutsFiles/struts_appCategoryDetail.xml"/>
+	<!--功能开关 -->
+	<include file="strutsFiles/struts_functions.xml"/>
+	<!--酒店注册 -->
+	<include file="strutsFiles/struts_hotel.xml"/>
+	<!-- 终端菜单排版 -->
+	<include file="strutsFiles/struts_terminalMenu.xml"/>
+	<include file="strutsFiles/struts_terminalSubMenu.xml"/>
+	<!-- 终端背景图片 -->
+	<include file="strutsFiles/struts_backimg.xml"/>
+	<!-- 直播apk -->
+	<include file="strutsFiles/struts_liveapk.xml"/>
+	<!-- 主屏广告 -->
+	<include file="strutsFiles/struts_mainAd.xml"/>
+	
+	<include file="strutsFiles/struts_discount.xml"/>
+	
+	<include file="strutsFiles/struts_customercase.xml"/>
+	<!-- 切换播放引擎 -->
+	<include file="strutsFiles/struts_play.xml"/>
+	
+	
+	
+</struts>

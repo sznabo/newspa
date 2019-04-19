@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+		<package name="hotel" extends="karaoke" namespace="/hotel">
+		
+		<!-- 更新 -->
+		<action name="update" class="HotelAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="HotelAction" method="findList">
+			<result name="success">/jsp/hotel/update.jsp</result>
+		</action>
+		
+		<action name="updateContentType" class="HotelAction" method="updateContentType">
+			<result name="success" type="redirectAction">
+			<param name="actionName">list</param>
+			</result>
+		</action>	
+		
+	</package>
+</struts>

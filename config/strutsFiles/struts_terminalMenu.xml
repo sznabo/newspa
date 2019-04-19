@@ -1,0 +1,27 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="terminalmenu" extends="karaoke" namespace="/terminalmenu">
+
+		<!-- 更新 -->
+		<action name="update" class="TerminalMenuAction" method="update">
+			<result name="input">/jsp/tmenu/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		<!-- 列表 -->
+		
+		<action name="list" class="TerminalMenuAction" method="findPage">
+			<result name="success">/jsp/tmenu/list.jsp</result>
+		</action>
+		
+		
+		<action name="toUpdate" class="TerminalMenuAction" method="toUpdate">
+			<result name="success">/jsp/tmenu/edit.jsp</result>
+		</action>
+		
+		<action name="updateStatu" class="TerminalMenuAction" method="updateStatu">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+	</package>
+</struts>

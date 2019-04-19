@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="liveapk" extends="karaoke" namespace="/liveapk">
+
+		<action name="list" class="LiveApkAction" method="list">
+			<result name="success">/jsp/liveapk/list.jsp</result>
+		</action>
+		
+		<action name="update" class="LiveApkAction" method="update">
+			<result name="success" type="chain">
+				<param name="actionName">list</param>
+                <param name="errMsg">${errMsg}</param>
+			</result>
+		</action>
+	</package>
+</struts>

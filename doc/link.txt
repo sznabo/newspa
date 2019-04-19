@@ -1,0 +1,235 @@
+1. 获取终端设备信息 
+参数：mac   终端设备号
+http://localhost:8080/newspa/adremote/getDeviceInfo.action?mac=55
+返回:
+Response<Device>
+
+msgCode 为fail时，表示未开通
+----------------------------------------------------------------------------------------------------
+
+2.心跳 （保持终端在线联系  3分钟刷一次）
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/heartbeat.action?mac=55
+返回: 无
+----------------------------------------------------------------------------------------------------
+
+3.上线（开机刷一次）
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/online.action?mac=55
+返回:无
+----------------------------------------------------------------------------------------------------
+
+4.检测更新
+参数：mac   终端设备号
+softVersion 软件版本号
+http://localhost:8080/newspa/adremote/checkSoftUpdate.action?mac=3333&softVersion=1
+
+返回 ：内容就是一个下载链接  没有代表不更新
+Response<String>
+----------------------------------------------------------------------------------------------------
+5.消息
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getDeviceMessage.action?mac=55
+返回：
+Response<List<Message>>
+----------------------------------------------------------------------------------------------------
+6.应用信息
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getAppInfos.action?mac=55
+返回：
+Response<List<AppInfo>>
+----------------------------------------------------------------------------------------------------
+7. 获取所有点播分类
+参数：mac  终端设备号
+http://192.168.2.9:8793/newspa/adremote/getAllVideos.action?mac=00:15:18:16:f9:89
+返回：
+Response<List<Vodpart> list
+----------------------------------------------------------------------------------------------------
+根据分类id获取点播信息
+参数：mac  终端设备号
+vodPartId  分类id
+pageNo     第几页
+pageSize   页码量
+http://192.168.2.29:8793/newspa/adremote/getVideosbyType.action?mac=56:53:54:02:03:c6&vodPartId=10
+返回：
+Response<List<Vodpart> list
+----------------------------------------------------------------------------------------------------
+
+8.广告信息
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getAllAd.action?mac=55
+返回：
+Response<List<Ad>>
+
+----------------------------------------------------------------------------------------------------
+
+9.本店介绍
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getAllShopIntroduce.action?mac=55
+返回：
+Response<List<ShopIntroduce>>
+
+----------------------------------------------------------------------------------------------------
+
+10.直播列表(单模和双模)（）作废
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getAllLiveManagement.action?mac=3333
+返回：
+Response<List<DateMessageVo>>
+
+----------------------------------------------------------------------------------------------------
+
+11.留言管理保存接口
+参数：GuestBook guestBook
+http://localhost:8080/newspa/adremote/saveGuestBook.action
+返回：
+Response<List<LiveVo>>
+
+----------------------------------------------------------------------------------------------------
+
+12.留言管理获取信息
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getServerMsgList.action?mac=55
+返回：
+Response<List<ServerMsg>>
+
+----------------------------------------------------------------------------------------------------
+
+13.呼叫信息接口
+参数：mac  终端设备号
+http://localhost:8080/newspa/adremote/getCalling.action?mac=55
+返回：
+无
+
+----------------------------------------------------------------------------------------------------
+
+14.获取城市接口
+http://localhost:8080/newspa/adremote/updateCity.action
+返回：城市
+Response<String>
+----------------------------------------------------------------------------------------------------
+
+15.获取当前系统时间
+
+http://localhost:8080/newspa/adremote/getDate.action
+
+----------------------------------------------------------------------------------------------------
+
+16.添加叫醒服务
+参数：mac  终端设备号 
+    wakeUpTime  叫醒时间
+http://localhost:8080/newspa/adremote/getWakeUp.action?mac=3333&&wakeUpTime=2015-11-02 18:02:20
+返回：
+无
+----------------------------------------------------------------------------------------------------
+
+17.查找技师分类
+参数：mac  终端设备号 
+http://localhost:8080/newspa/adremote/getTechnicianType.action?mac=55
+返回：
+List<TechnicianType>
+
+
+----------------------------------------------------------------------------------------------------
+18.根据分类id查找技师
+参数：mac  终端设备号 
+    typeId  技师分类id
+http://localhost:8080/newspa/adremote/getTechnicianById.action?mac=3333&&typeId=1
+返回：
+List<Technician> lists
+----------------------------------------------------------------------------------------------------
+19.获取所有菜品分类
+参数：mac  终端设备号 
+http://localhost:8080/newspa/adremote/getDishStyle.action?mac=3333
+返回：
+List<DishStyle> styles
+----------------------------------------------------------------------------------------------------
+20.根据分类id查找菜品信息
+参数：mac  终端设备号 
+    typeId  菜品分类id
+http://localhost:8080/newspa/adremote/getDishStringByStyleId.action?mac=3333&&styleId=1
+返回：
+List<Dish> lists
+----------------------------------------------------------------------------------------------------
+21. 根据名称搜索点播
+参数：mac  终端设备号 
+    vodName  搜索名称
+http://localhost:8080/newspa/adremote/getvideoByname.action?mac=28:79:94:e0:16:62&vodName=s
+
+-----------------------------------------------------------------------------------------------------
+22.搜索歌曲通过名称
+mac
+songName 歌曲名称
+http://localhost:8080/newspa/adremote/findSongByName.action?mac=28:79:94:e0:16:62&songName=
+
+-----------------------------------------------------------------------------------------------------
+23.查找app大类及其子类
+mac
+http://localhost:8080/newspa/adremote/getAppCategory.action?mac=28:79:94:e0:16:62
+返回：
+List<AppCategory> categories
+-----------------------------------------------------------------------------------------------------
+24.查找直播分类信息（直接返回对应直播信息）
+mac
+http://localhost:8080/newspa/adremote/getLiveCategory.action?mac=28:79:94:e0:16:62
+返回：
+List<LiveCategory> lists
+-----------------------------------------------------------------------------------------------------
+25.查找功能开关列表
+mac
+http://localhost:8080/newspa/adremote/getFinctions.action?mac=28:79:94:e0:16:62
+返回：
+List<Functions> list
+-----------------------------------------------------------------------------------------------------
+26.获取菜单列表信息
+mac
+http://localhost:8080/newspa/adremote/getTemlMenu.action?mac=28:79:94:e0:16:62
+
+返回：
+List<TerminalMenu> list
+
+TerminalMenu(主菜单)字段：(id:主菜单ID，logoUrl：图标地址,name:主菜单名,statu:菜单状态(1为激活，0为关闭)),subMenus:二级菜单)
+subMenu(二级菜单)字段： (id:二级菜单ID，name:二级菜单名,statu:菜单状态(1为激活，0为关闭))
+
+-----------------------------------------------------------------------------------------------------
+
+27.获取背景图片信息
+mac
+http://localhost:8080/newspa/adremote/getBackImg.action?mac=28:79:94:e0:16:62
+返回：
+List<TemlCfg>
+TemlCfg(终端设置信息) 字段(key:配置key，value:配置值,desc:配置描述)  背景图片与桌面logo属于此类型. 背景图片KEY值 固定为 ："back_img" ，桌面logo key值固定为： "back_logo"
+
+-----------------------------------------------------------------------------------------------------
+
+28.获取第三方直播APK信息
+mac
+http://localhost:8080/newspa/adremote/getLiveApk.action?mac=28:79:94:e0:16:62
+返回：
+LiveApk
+
+LiveApk(第三方直播APK) 字段(id：主键id，name:apk名称(自定义), path:apk文件路径 , packName:apk包名) 若后台未配置第三方APK则返回空
+
+-----------------------------------------------------------------------------------------------------
+获取主屏幕广告接口
+mac
+http://localhost:8080/newspa/adremote/getMainAd.action?mac=28:79:94:e0:16:62
+返回：
+List<MainAd> ads 
+
+-----------------------------------------2018.4.21-----------------------------------------
+
+29.歌曲 根据分类来查找歌曲信息    必填 分类 id  选填   页数 size  页数  默认10  排序模式 
+
+http://192.168.1.18:8793/newspa/adremote/getSongsBycategory.aciton ?.....
+
+必填  categoryId 
+
+选填
+ pageNo 默认1
+ pageSize defalut 10
+ sortType 1 热度 2 最新
+ 
+ 
+ 
+

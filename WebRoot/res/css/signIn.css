@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Signin{ margin:0 auto;  padding:0; width:692px; }
+.Signin_Top{ margin:15% 0 20px 0; text-align:center; font-size:35px; color:#ffffff;}
+.Signin_body{ margin:0; padding:0; width:692px; height:338px; background:url(../images/loginImg/logininfo.png) no-repeat; position:relative;}
+form{ margin:0; position:absolute; top:85px; left:330px; }
+.inp{ margin:15px 0;}
+.inp span{ margin:0; font-size:15px; color:#58788b; display:-moz-inline-box; display:inline-block; width:60px;}
+.inp input{ margin:0; padding:0 7px; width:295px; height:46px; line-height:46px; background:url(../images/loginImg/inpu.png) no-repeat; border:none; border:none; outline:medium;}
+
+button{ margin:15px 0 0 66px; width:100px; height:42px; font-size:14px;}
+
+.copyright{ margin:60px 0 0 0;height: 20px;text-align: center;color: #111111; font-family:Geneva, Arial, Helvetica, sans-serif; font-size:13px;}

@@ -1,0 +1,68 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="songCategory" extends="karaoke" namespace="/songCategory">
+		
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="SongCategoryAction" method="toAdd">
+			<result name="success">/jsp/song_category/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="SongCategoryAction" method="save">
+			<result name="input">/jsp/song_category/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="SongCategoryAction" method="toUpdate">
+			<result name="success" >/jsp/song_category/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="SongCategoryAction" method="update">
+			<result name="input">/jsp/song_category/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="SongCategoryAction" method="findPage">
+			<result name="success">/jsp/song_category/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="SongCategoryAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>
+		
+		
+		<!-- ####################################################################################### -->
+		
+		<!-- 分类里面的歌曲列表 -->
+		<action name="categorySongs" class="SongCategoryDetailAction" method="findPage">
+			<result name="success">/jsp/song_category/category_songs.jsp</result>
+		</action>
+		
+		<!-- 进入添加歌曲 -->
+		<action name="toAddCategorySong" class="SongCategoryDetailAction" method="toAdd">
+			<result name="success">/jsp/song_category/add_songlist.jsp</result>			
+		</action>
+		
+		<!-- 添加歌曲到分类 -->
+		<action name="addSong" class="SongCategoryDetailAction" method="save">
+			<result name="success" type="redirectAction">
+				<param name="actionName">toAddCategorySong</param>
+			</result>
+		</action>
+		
+		<!-- 从分类里面删除歌曲 -->
+		<action name="deleteSong" class="SongCategoryDetailAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">categorySongs</param>
+			</result>
+		</action>
+	</package>
+</struts>

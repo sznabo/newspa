@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { font-family: "Microsoft YaHei",Helvetica,"Hiragino Sans GB",Arial,sans-serif; font-size: 3.5em; background:#e2e6ef; color:#222222;} 
+a{ text-decoration:none; color:#222222; cursor:pointer; border:none;}
+a:hover{ text-decoration:none; color:#222222; border:none;}
+a:active{ color:#222222; border:none;  }
+img{max-width:80%;height:auto; vertical-align:middle; border:0; margin:0; padding:0;}
+.main{ margin:0 auto; padding:0; width:100%; min-width:640px;}
+
+.mainUl{ margin:0 auto; padding:0 0 0.2% 0; list-style-type:none; width:99.5%; overflow:hidden;}
+.mainUl li{ width:49.5%; margin:0 auto; padding:4% 0; text-align:center; -moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%);-moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+.mainUl li:active{ width:49.5%; margin:0 auto; padding:4% 0; text-align:center; -moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #dadada;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%);-moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+.mainUl1{ float:left; }
+.mainUl2{ float:right;}
+
+
+.mainNo{ margin:0 auto; padding:0 0 0.2% 0; list-style-type:none; width:100%; display:block; overflow:hidden;}
+.mainNo li{ width:33%;float:left; margin:1% 0.1% 0 0.1%; padding:4% 0; text-align:center; -moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+.mainNo li:active{ width:33%;float:left; margin:1% 0.1% 0 0.1%; padding:4% 0; text-align:center; -moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #dadada;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+
+.set{-moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+.set:active{-moz-border-radius: 20px 20px 20px 20px;    -webkit-border-radius: 20px 20px 20px 20px;    -o-border-radius:20px 20px 20px 20px;    border-radius: 20px 20px 20px 20px; background-color: #dadada;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+/*方向OK键开始*/
+.mainOk{ width:100%; margin:1% auto; padding:0 0 0.2% 0; list-style-type:none;  overflow:hidden;}
+.mainOk li{ float:left; width:31.3%; padding:4% 0;margin:1%;;  text-align:center;}
+
+/*OK键*/
+.mainOk_fan{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 50px 50px 50px 50px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #888888; -webkit-box-shadow:0 1px 3px #888888; box-shadow: 1px 1px 3px 0 #888888; }
+.mainOk_fan:active{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 50px 50px 50px 50px; background-color: #dadada;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #888888; -webkit-box-shadow:0 1px 3px #888888; box-shadow: 1px 1px 3px 0 #888888;}
+
+/*向上键*/
+.up{ -moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 50px 50px 50px 50px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+.up:active{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 60px 60px 60px 60px; background-color: #e5e5e5;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+/*向下键*/
+.down{ -moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 50px 50px 50px 50px; background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+.down:active{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 60px 60px 60px 60px; background-color: #e5e5e5;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+/*向左键*/
+.left{ -moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 50px 50px 50px 50px;background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+.left:active{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 60px 60px 60px 60px; background-color: #e5e5e5;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+/*向右键*/
+.right{ -moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 60px 60px 60px 60px;background-color: #f3f3f3;    background: -webkit-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: linear-gradient(to bottom,#F8F8F8 0,#eeeeee 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+.right:active{-moz-border-radius: 50px 50px 50px 50px;    -webkit-border-radius: 50px 50px 50px 50px;    -o-border-radius:50px 50px 50px 50px;    border-radius: 60px 60px 60px 60px; background-color: #e5e5e5;    background: -webkit-linear-gradient(top,#e5e5e5 0,#dadada 100%);//代表从上到下，从白到蓝的渐变    background: -moz-linear-gradient(top,#F8F8F8 0,#eeeeee 100%);    background: -o-linear-gradient(top,#e5e5e5 0,#dadada 100%);    background: linear-gradient(to bottom,#e5e5e5 0,#dadada 100%); -moz-box-shadow:0 1px 3px #666666; -webkit-box-shadow:0 1px 3px #666666; box-shadow: 1px 1px 3px 0 #666666;}
+
+
+/*方向OK键结束*/
+

@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="discount" extends="karaoke" namespace="/discount">
+		<!--  后台留言管理ServerMsgAction -->
+   		<action name="DiscountAction_*" class="DiscountAction" method="{1}">
+   			<result name="list" >
+   				/jsp/discount/discountList.jsp
+   			</result>
+   			
+   			<result name="add" >
+   				/jsp/discount/addDiscount.jsp
+   			</result>
+   			
+   			<result name="edit" >
+   				/jsp/discount/editDiscount.jsp
+   			</result>
+   			
+   			<result name="redirectList" type="redirectAction">
+   				<param name="actionName">DiscountAction_home</param>
+   				<param name="namespace">/discount</param>
+   			</result>
+   		</action>
+	</package>
+</struts>

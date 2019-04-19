@@ -1,0 +1,242 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- android请求的包 -->
+	<package name="adremote" extends="karaoke" namespace="/adremote">
+		<interceptors>
+			<interceptor name="trimParameter" class="com.boyue.framework.web.interceptor.TrimParameterInterceptor" />
+			
+			<!-- 不验证登陆的拦截器 -->
+			<interceptor-stack name="adMobileStackNoPermission">
+				<interceptor-ref name="defaultStack">
+					 <param name="exception.logEnabled">true</param> 
+				     <param name="exception.logLevel">error</param> 
+				</interceptor-ref>
+				<interceptor-ref name="json" />
+				<interceptor-ref name="trimParameter" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 指定默认的interceptor -->	
+		<default-interceptor-ref name="adMobileStackNoPermission" />
+		
+		<global-results>
+			<result type="json" name="global_ajax_response">
+				<param name="root">ajaxResponse</param>
+			</result>
+			<result name="jsonException" type="chain">jsonException</result>
+			<result name="sessionTimeout" type="chain">sessionTimeout</result>
+			<result name="illegalRequest" type="chain">illegalRequest</result>
+		</global-results>
+	
+		<global-exception-mappings>
+			 <exception-mapping exception="java.lang.Throwable" result="jsonException" /> 
+		</global-exception-mappings>
+		
+		<!-- 程序异常 -->
+		<action name="jsonException" class="JsonExceptionAction" method="jsonException">
+			<interceptor-ref name="adMobileStackNoPermission"></interceptor-ref>
+		</action>
+		
+		<!-- 会话超时 -->
+		<action name="sessionTimeout" class="JsonExceptionAction" method="sessionTimeout">
+			<interceptor-ref name="adMobileStackNoPermission"></interceptor-ref>
+		</action>
+		
+		<!-- 没权限的非法访问 -->
+		<action name="illegalRequest" class="JsonExceptionAction" method="illegalRequest">
+			<interceptor-ref name="adMobileStackNoPermission"></interceptor-ref>
+		</action>
+
+		<!--################################ 业务action定义################################-->
+		<!-- 获取机器信息 -->
+		<action name="getDeviceInfo" class="DeviceRemoteAction" method="getDeviceInfo">
+		</action>
+		
+		<!-- 心跳 -->
+		<action name="heartbeat" class="DeviceRemoteAction" method="heartbeat">
+		</action>
+		
+		<!-- 上线-->
+		<action name="online" class="DeviceRemoteAction" method="online">
+		</action>
+		
+		<!-- 获取软件更新信息 -->
+		<action name="checkSoftUpdate" class="DeviceRemoteAction" method="checkSoftUpdate" />
+		
+		<!-- 获取所有歌曲 -->
+		<action name="getAllSongs" class="DeviceRemoteAction" method="getAllSongs">
+		</action>
+		
+		<!-- 获取所有歌曲分类 ,包含歌曲 -->
+		<action name="getCategorySongs" class="DeviceRemoteAction" method="getCategorySongs">
+		</action>
+		
+		<!-- 获取消息-->
+		<action name="getDeviceMessage" class="DeviceRemoteAction" method="getDeviceMessage">
+		</action>
+		
+		<!-- 获取应用新型-->
+		<action name="getAppInfos" class="DeviceRemoteAction" method="getAppInfos">
+		</action>
+		
+		<!-- 获取所有广告-->
+		<action name="getAllAd" class="DeviceRemoteAction" method="getAllAd">
+		</action>
+	
+		<!-- 增加一条播放记录-->
+		<action name="playSong" class="DeviceRemoteAction" method="playSong">
+		</action>
+		
+		<!-- 获取所有vod-->
+		<action name="getAllVideos" class="DeviceRemoteAction" method="getAllVideos">
+		</action>
+		
+		<!-- 根据名称获取所有影片分类信息-->
+		<action name="getvideoByname" class="DeviceRemoteAction" method="getvideoByname">
+		</action>
+		
+		<!-- 根据分类id获取影片-->
+		<action name="getVideosbyType" class="DeviceRemoteAction" method="getVideosbyType">
+		</action>
+		
+		<!-- 获取所有本店介绍对象ShopIntroduce-->
+		<action name="getAllShopIntroduce" class="DeviceRemoteAction" method="getAllShopIntroduce">
+		</action>
+		
+		<!-- 获取所有直播管理对象LiveManagement-->
+		<action name="getAllLiveManagement" class="DeviceRemoteAction" method="getAllLiveManagement">
+		</action>
+		
+		<!-- 保存留言管理对象GuestBook-->
+		<action name="saveGuestBook" class="DeviceRemoteAction" method="saveGuestBook">
+		</action>
+		
+		<!-- 留言管理获取信息ServerMsg-->
+		<action name="getServerMsgList" class="DeviceRemoteAction" method="getServerMsgList">
+		</action>
+		
+		<!-- 呼叫获取信息Calling-->
+		<action name="getCalling" class="DeviceRemoteAction" method="getCalling">
+		</action>
+		
+		<!-- 更新城市-->
+		<action name="updateCity" class="DeviceRemoteAction" method="updateCity">
+		</action>
+		
+		<!-- 获取日期时间-->
+		<action name="getDate" class="DeviceRemoteAction" method="getDate">
+		</action>
+		
+		<!--添加叫醒服务-->
+		<action name="getWakeUp" class="DeviceRemoteAction" method="getWakeUp">
+		</action>
+		<!--技师类型-->
+		<action name="getTechnicianType" class="DeviceRemoteAction" method="getTechnicianType">
+		</action>
+		<!--根据类型查找技师-->
+		<action name="getTechnicianById" class="DeviceRemoteAction" method="getTechnicianById">
+		</action>
+		<!--菜品分类-->
+		<action name="getDishStyle" class="DeviceRemoteAction" method="getDishStyle">
+		</action>
+		<!--根据分类查找菜品-->
+		<action name="getDishStringByStyleId" class="DeviceRemoteAction" method="getDishStringByStyleId">
+		</action>
+		<!--根据名称查找歌曲-->
+		<action name="findSongByName" class="DeviceRemoteAction" method="findSongByName">
+		</action>
+		<!--获取应用分类及其之类  -->
+		<action name="getAppCategory" class="DeviceRemoteAction" method="getAppCategory">
+		</action>
+		<!--获取点播分类信息-->
+		<action name="getLiveCategory" class="DeviceRemoteAction" method="getLiveCategory">
+		</action>
+		<!--获取功能开关列表-->
+		<action name="getFinctions" class="DeviceRemoteAction" method="getFinctions">
+		</action>
+		
+		<action name="getTemlMenu" class="DeviceRemoteAction" method="getTemlMenu">
+		</action>
+		
+		<action name="getBackImg" class="DeviceRemoteAction" method="getBackImg">
+		</action>
+		
+		<action name="getLiveApk" class="DeviceRemoteAction" method="getLiveApk">
+		</action>
+		<!---->
+		<action name="checkIp" class="weixinAction" method="checkIp">
+		<result name="remote" >/jsp/MobileRemote.jsp</result>
+		<result name="ip" >/jsp/ipAdress.jsp</result>
+		</action>
+		
+		<!--获取功能开关列表-->
+		<action name="getServer" class="weixinAction" method="getServer">
+		</action>
+		<!--获取主屏幕广告列表-->
+		<action name="getMainAd" class="DeviceRemoteAction" method="getMainAd">
+		</action>
+		
+		 <!-- 歌曲 根据分类来查找歌曲信息 -->
+		<action name="getSongsBycategory" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getSongsBycategory">
+		</action>
+		
+		<!-- 增加MAC码 -->
+		<action name="insertMacByAuto_Username" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="insertMacByAuto_Username">
+		</action>
+		
+		<!-- 根据Mac 修改位置号 -->
+		<action name="updateUsernameByMac" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="updateUsernameByMac">
+		</action>
+		
+		<!-- 音乐热度 -->
+		<action name="updateSongcheckcountById" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="updateSongcheckcountById">
+		</action>
+		
+		<!-- 电影热度 -->
+		<action name="updatevodcheckcountById" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="updatevodcheckcountById">
+		</action>
+		<!-- 用户反馈 -->
+		<action name="insertServerMsg" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="insertServerMsg">
+		</action>
+		 <!-- 电影热度 查询 -->
+		<action name="getVideosbyTypeBysortType" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getVideosbyTypeBysortType">
+		</action>
+		<!-- 获取播放引擎 -->
+		<action name="getPlayType" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getPlayType">
+		</action>
+		<action name="findIntroParentIsNull" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findIntroParentIsNull">
+		</action>
+		<action name="findsecondIntroByParentId" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findsecondIntroByParentId">
+		</action>
+		<action name="findTime" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findTime">
+		</action>
+		<action name="findLogo" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findLogo">
+		</action>
+		<action name="findSongByname" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findSongByname">
+		</action>
+		<action name="findAllCall" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findAllCall">
+		</action>
+		<action name="findAllTechnicianType" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findAllTechnicianType">
+		</action>
+		<action name="findAlltechnician" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findAlltechnician">
+		</action>
+		<action name="findAllDishstyle" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findAllDishstyle">
+		</action>
+		<action name="findDishByDishstyle" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findDishByDishstyle">
+		</action>
+		
+		<action name="getAllDiscount" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getAllDiscount">
+		</action>
+		<action name="getAllCustomercase" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getAllCustomercase">
+		</action>
+		
+		
+		
+		
+	</package>
+	
+	
+
+</struts>

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+html{ margin:0; padding:0;  }
+body{ margin:0; padding:0; }
+.AlonModule{ margin:10px auto 0; width:96%;}
+.AlonModule_Top{ margin:0 auto; height:50px; width:100%; position:relative;}
+.AlonModule_Top img{ border:0; margin:0; padding:0;}
+.AlonModule_Top1{ margin:0; width:12px; float:left; height:50px; position:absolute; top:0; left:0;}
+.AlonModule_Top2{ margin:0; float:left; background:url(../images/TopColumn2.png) repeat-x; padding:8px 0; height:38px; line-height:35px; width:98.5%; position:absolute; top:0; left:12px;}
+.AlonModule_Top2 ul{ margin:0; list-style-type:none; padding:0;}
+.AlonModule_Top2 li{ margin:0 auto; float:left; width:16%; font-size:15px; text-align:center; height:33px; min-width:100px; _width:expression(document.body.clientWidth < 100 ? "100px" : "auto");}
+.AlonModule_Top2 li a{ text-decoration:none; text-align:center; color:#5294d1; font-size:14px;}
+.AlonModule_Top2 li a:hover{ text-decoration:none; text-align:center; color:#f59122; font-size:14px; border-bottom:2px solid #f59122;}
+.AlonModule_Top2 img{ margin:0; width:17px; height:17px; border:0;}
+.AlonModule_Top2 li.currentHover a{  color:#f59122; border-bottom:2px solid #f59122;}
+.AlonModule_Top3{ margin:0; float:right; width:15px; height:50px; position:absolute; top:0; right:0;}
+
+.AlonModule_Body{ margin:0 auto;background:#edebeb; height:580px; width:100%;overflow-y:auto;overflow: scroll;overflow-x:hidden; }
+.AlonModule_list{ margin:0 auto; width:98.6%; min-height: 570px;height:auto;_height:580px; overflow: hidden;background:#f0f0f0;padding:0;}
+
+.ContentInformation{ margin:10px auto 0;width:97%;}
+.table1{ border:1px solid #cecece; border-collapse:collapse;}
+.table1 th, .table1 td{ border-bottom:1px solid #cecece; border-collapse:collapse;}
+.table1{ margin:10px auto 0; width:97%; min-width:550px; border-collapse:collapse;}
+.table1 tr{ margin:0; padding:0;}
+.table1 tr th{ margin:0; padding:0;  height:37px; line-height:37px; color:#6d7275; font-size:14px; text-align:center;}
+.table1 tr th.tth{ padding:0 0 0 5px; background:#e9e7e7;}
+.table1 tr.Header th{ text-align:center; background:#edebeb;}
+.table1 tr td{ margin:0; padding:0; height:36px; line-height:36px; color:#818689; font-size:12px; text-align:center;}
+.table1 tr td a{ margin:0 0 0 15px; text-decoration:none; color:#6d7275; }
+.table1 tr td a:hover{ margin:0 0 0 15px; text-decoration:none; }
+
+/*   翻页  */
+.images_Page{ margin:15px auto 0; width:90%; clear:both; border-collapse:collapse; text-align:center; font-size:13px; color:#888888; padding:4px 0; position:absolute; bottom:22px;}
+.images_Page span{ margin:0 13px; font-size:15px;}
+.images_Page a img{ border:0;}
+.images_After{ color:#ccd0d3 !important;}
+.images_Page a:hover.images_After{ color:#ccd0d3;}
+.images_Page a{ text-decoration:none; margin:0 7px; color:#888888;}
+.images_Page a:hover{ text-decoration:none; margin:0 7px; color:#999999;}
+ 
+
+.ProgramList_Search{ margin:0 auto; height:36px; width:96%; padding:2px 0; overflow:hidden; color:#777777; }
+.Search{ margin:4px 0 0 0; float:left; font-size:14px; color:#868788; }
+.Search input.Sear{ height:30px; margin:0; width:60px; color:#777777;}
+.Search input.arch{ height:22px; margin:0; width:130px; border:1px solid #d6d4d4; background:#ffffff;}
+.add_dar{ margin:0; float:right; height:40px; font-size:14px;}
+.add_dar img{ margin:0; padding:0; border:0;}
+.add_darImg1{ width:18px; height:40px; margin:0; float:left;}
+.add_darImg2{ width:18px; height:40px; margin:0; float:left;}
+.add_darBackground{ margin:0; float:left;  height:40px; padding:0; background:url(../images/icons_02.png) repeat-x; }
+.add_darBackground a{ text-decoration:none; margin:0 4px; padding:0; color:#777777; line-height:40px;}
+.add_darBackground a:hover{ text-decoration:none; margin:0 4px; padding:0; line-height:40px; color:#666666;}
+.add_darBackground img{ margin:0; border:0; width:12px; height:12px;}

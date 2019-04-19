@@ -1,0 +1,68 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="vod" extends="karaoke" namespace="/admin">
+		<!--  后台点播栏目管理VodPartAction -->
+   		<action name="vodPartAction_*" class="VodPartAction" method="{1}">
+   			<result name="goListVodPart" >
+   				/jsp/vod/vodPartList.jsp
+   			</result>
+   			<result name="goaddVodPart" >
+   				/jsp/vod/addVodPart.jsp
+   			</result>
+   			
+   			<result name="goEditVodPart" >
+   				/jsp/vod/editVodPart.jsp
+   			</result>
+   			<result name="listVodPart" type="redirectAction">
+   				vodPartAction_listVodPart?type=goListVodPart
+   			</result>
+   		</action>
+   		
+   		<action name="vodProgram_*" class="VodProgramAction" method="{1}">
+   			<result name="goListVodProgram">
+   				/jsp/vod/vodprogramList.jsp
+   			</result>
+   			<result name="toUpdate">
+   				/jsp/vod/editVodprogram.jsp
+   			</result>
+   			<result name="prosperity" type="redirectAction">
+   				<param name="actionName">vodProgram_browseAllVodprogramByVodpartID</param>
+   				<param name="namespace">/admin</param>
+   			</result>
+   			<result name="relist" type="redirectAction">
+   				<param name="actionName">vodProgram_browseAllVodprogramByVodpartID?messge=${messge}</param>
+   				<param name="namespace">/admin</param>
+   			</result>
+   			<result name="vodprogramlist">
+   				/jsp/vod/vodprogramList.jsp
+   			</result>
+   			<result name="skip">
+   				/jsp/vod/addvodprogram.jsp
+   			</result>
+   		</action>
+   		
+   		<action name="vodVideoAction_*" class="VodVideoAction" method="{1}">
+   			<result name="vodvideolist">
+   				/jsp/vod/vodvideoList.jsp
+   			</result>
+   			<result name="modifyVido">
+   				/jsp/vod/editVodvideo.jsp
+   			</result>
+   			<result name="add">
+   				/jsp/vod/addVodvideo.jsp
+   			</result>
+   			<result name="list" type="redirectAction">
+   				<param name="actionName">vodVideoAction_browseVodvideoByVodprogramID</param>
+   				<param name="namespace">/admin</param>
+   			</result>
+   			<result name="relist" type="redirectAction">
+   				<param name="actionName">vodVideoAction_browseVodvideoByVodprogramID?messge=${messge}</param>
+   				<param name="namespace">/admin</param>
+   			</result>
+   		</action>
+   		
+   		
+	</package>
+</struts>

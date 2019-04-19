@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<header>
+        <result forceReloadCheck="true"></result>
+    </header>
+    
+	<xml fileName="sys_config.xml">
+		<!-- 每5秒去检查一下有没有改动 -->
+		<reloadingStrategy refreshDelay="5000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/>
+	</xml>
+</configuration>
+

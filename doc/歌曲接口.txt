@@ -1,0 +1,15 @@
+1. 获取所有歌曲列表
+http://localhost:8080/newspa/adremote/getAllSongs.action?mac=3333
+返回:
+Response<List<Song>>
+----------------------------------------------------------------------------------------------------
+
+2.
+http://192.168.2.9:8793/newspa/adremote/getCategorySongs.action?mac=00:15:18:16:f9:89
+返回：
+Response<List<SongCategory>>
+
+
+------------------------------------------------------------------------------
+呼叫页面链接
+http://localhost:8080/newspa/jsp/index1.jsp

@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="shopintroduceview" extends="karaoke" namespace="/shopintroduceview">
+		<!--  后台直播管理VodPartAction -->
+   		<action name="shopIntroduceViewAction_*" class="ShopIntroduceViewAction" method="{1}">
+   			<result name="list" >
+   				/jsp/shopintroduceview/shopIntroduceViewList.jsp
+   			</result>
+   			
+   			<result name="add" >
+   				/jsp/shopintroduceview/addShopIntroduceView.jsp
+   			</result>
+   			
+   			<result name="edit" >
+   				/jsp/shopintroduceview/editShopIntroduceView.jsp
+   			</result>
+   			
+   			<result name="redirectList" type="redirectAction">
+   				<param name="actionName">shopIntroduceViewAction_home</param>
+   				<param name="namespace">/shopintroduceview</param>
+   			</result>
+   		</action>
+	</package>
+</struts>

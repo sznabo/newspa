@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="appCategoryDetail" extends="karaoke" namespace="/appCategoryDetail">
+		
+		<!-- 进入添加页面 -->
+		<action name="toAdd" class="AppCategoryDetailAction" method="toAdd">
+			<result name="success">/jsp/AppCategoryDetail/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="AppCategoryDetailAction" method="save">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toUpdate" class="AppCategoryDetailAction" method="toUpdate">
+			<result name="success" >/jsp/AppCategoryDetail/edit.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="AppCategoryDetailAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="AppCategoryDetailAction" method="findPage">
+			<result name="success">/jsp/AppCategoryDetail/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="AppCategoryAction" method="deleteIds">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+	</package>
+</struts>

@@ -1,0 +1,53 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="song" extends="karaoke" namespace="/song">
+		
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="SongAction" method="toAdd">
+			<result name="success">/jsp/song/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="SongAction" method="save">
+			<result name="input">/jsp/song/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="SongAction" method="toUpdate">
+			<result name="success" >/jsp/song/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="SongAction" method="update">
+			<result name="input">/jsp/song/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="SongAction" method="findPage">
+			<result name="success">/jsp/song/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="SongAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>
+		
+		<!-- 删除 歌词-->
+		<action name="delLyricFile" class="SongAction" method="delLyricFile">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+		
+		<!-- 导入 -->
+		<action name="macRead" class="SongAction" method="macRead">
+			<result name="success" type="redirectAction">list?messge=${messge}</result>
+		</action>
+	</package>
+</struts>

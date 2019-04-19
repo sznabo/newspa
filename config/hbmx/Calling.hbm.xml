@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.Calling" table="calling">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userid" type="java.lang.Integer">
+            <column name="userid" not-null="true">
+            <comment>设备外键ID</comment>
+            </column>
+        </property>
+        <property name="time" type="java.util.Date">
+            <column name="time"  >
+                <comment>呼叫时间，即创建时间</comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" length="250" not-null="true">
+                <comment>1新增，2 已经查看</comment>
+            </column>
+        </property>
+        
+         <property name="counts" type="java.lang.Integer">
+            <column name="counts" length="1" not-null="true">
+                <comment>呼叫次数</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

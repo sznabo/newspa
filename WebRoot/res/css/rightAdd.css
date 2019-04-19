@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+#form{ margin:0 auto; width:98%;}
+.table2, .table2 td, .table2 th{ border:1px solid #cecece; }
+
+.table2{ margin:15px auto 0; width:100%; border-collapse:collapse;}
+.table2 tr{ margin:0; padding:0;}
+.table2 tr th{ margin:0; padding:0;  height:37px; line-height:37px; background:#e9e8e8; padding:0 15px 0 5px; text-align:right; color:#6d7275; font-size:13px;}
+
+.table2 tr td{ margin:0; padding:6px;}
+.table2 tr td.inp input{ width:200px; border:1px solid #cccccc; height:25px; line-height:25px; color:#999999; font-size:13px; padding:0 4px;}
+.table2 tr td textarea{  line-height:20px; color:#999999; font-size:13px; border:1px solid #cccccc;}
+
+#current{
+	color:#878d90; font-size:13px;
+height:40px;
+line-height:40px;
+overflow:hidden;
+background:#e6eef8;
+border-bottom:1px solid #acbbc5;
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+#form{ margin:0 auto; width:98%;}
+.table1, .table1 td, .table1 th{ border:1px solid #cecece; border-collapse:collapse;}
+
+.table1{ margin:15px auto 0; width:100%; min-width:550px; border-collapse:collapse;}
+.table1 tr{ margin:0; padding:0;}
+.table1 tr th{ margin:0; padding:0;  height:37px; line-height:37px; text-align:left; color:#6d7275; font-size:15px;}
+.table1 tr th.tth{ padding:0 0 0 5px; background:#e9e7e7;}
+.table1 tr.Header th{ text-align:center; background:#edebeb;}
+.table1 tr th a{ margin:0 0 0 15px; text-decoration:none; color:#6d7275; font-size:13px;}
+.table1 tr th a:hover{ margin:0 0 0 15px; text-decoration:none;  font-size:13px;}
+.table1 tr td{ margin:0; padding:0; height:30px; line-height:30px; color:#818689; font-size:13px; text-align:center;}
+.table1 tr td.check{ width:30px; text-align:center;}
+
+.table1 tr td.Operating a,.table1 tr td.Operating a:hover{margin:0 0 0 0px; text-decoration:none; color:#828689; font-size:13px;}
+.table1 tr td.Operating img{ border:0;}
+.table1 tr td.Operating{  margin:0;}
+
+.table1 tr td.Management{width:50px; min-width:50px; margin:0; }
+.table1 tr td.Management a,table tr td.Management a:hover{ text-align:center; text-decoration:none; color:#828689; font-size:13px;}
+
+.table1 tr td.Date{ width:105px; color:#999999;}
+.table1 tr td.Local{ width:105px; color:#999999;}
+
+.table1 tr th.papg{ margin:0; background:#f5f0f0; padding-top:10px; font-size:13px; font-weight:normal;text-align: center;}
+.table1 tr th.papg span{ margin:0 13px; font-size:13px;}
+.table1 tr th.papg a img{ border:0;}
+.table1 tr th.papg a.After{ color:#ccd0d3;}
+
+#current{
+	color:#878d90; font-size:13px;
+height:40px;
+line-height:40px;
+overflow:hidden;
+background:#e6eef8;
+border-bottom:1px solid #acbbc5;
+}

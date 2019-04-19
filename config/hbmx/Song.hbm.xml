@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.Song" table="song"  >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="songName" type="java.lang.String">
+            <column name="song_name" length="100" not-null="true">
+                <comment>歌曲名称</comment>
+            </column>
+        </property>
+        <property name="songNamee" type="java.lang.String">
+            <column name="song_namee" length="100" not-null="true">
+                <comment>英文歌曲名称</comment>
+            </column>
+        </property>
+        <property name="songName_jap" type="java.lang.String">
+            <column name="song_name_jap" length="100">
+            </column>
+        </property>
+        <property name="songName_kor" type="java.lang.String">
+            <column name="song_name_kor" length="100">
+            </column>
+        </property>
+        <property name="singer" type="java.lang.String">
+            <column name="singer" length="100" not-null="true">
+                <comment>歌手</comment>
+            </column>
+        </property>
+        <property name="singere" type="java.lang.String">
+            <column name="singere" length="100" not-null="true">
+                <comment>英文歌手</comment>
+            </column>
+        </property>
+        <property name="singerType" type="java.lang.String">
+            <column name="singer_type" length="30" not-null="true">
+                <comment>歌手类别</comment>
+            </column>
+        </property>
+        <property name="songYinpin" type="java.lang.String">
+            <column name="song_yinpin" not-null="true">
+                <comment>歌曲的拼音</comment>
+            </column>
+        </property>
+        <property name="lyricFile" type="java.lang.String">
+            <column name="lyric_file">
+                <comment>歌曲文件路径</comment>
+            </column>
+        </property>
+        <property name="year" type="java.lang.Integer">
+            <column name="year">
+                <comment>发行年份</comment>
+            </column>
+        </property>
+        <property name="musicFile" type="java.lang.String">
+            <column name="music_file"  not-null="true">
+                <comment>歌曲文件</comment>
+            </column>
+        </property>
+            <property name="logo" type="java.lang.String">
+            <column name="logo"  not-null="true">
+                <comment>歌曲文件</comment>
+            </column>
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type"  not-null="true">
+                <comment>1 midi, 2视频</comment>
+            </column>
+        </property>
+        
+        <property name="playTimes" type="java.lang.Integer">
+            <column name="playTimes"  not-null="true">
+                <comment>播放次数</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="cloudsManage" extends="karaoke" namespace="/cloudsManage">
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="CloudsManageAction" method="toUpdate">
+			<result name="success" >/jsp/clousManage/editClouds.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="CloudsManageAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="CloudsManageAction" method="list">
+			<result name="success">/jsp/clousManage/listClous.jsp</result>
+		</action>
+
+		
+		
+	</package>
+</struts>

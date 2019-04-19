@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="soft" extends="karaoke" namespace="/soft">
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="SoftAction" method="toAdd">
+			<result name="success">/jsp/softmanager/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="SoftAction" method="save">
+			<result name="input">/jsp/softmanager/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="SoftAction" method="toUpdate">
+			<result name="success" >/jsp/softmanager/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="SoftAction" method="update">
+			<result name="input">/jsp/softmanager/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="SoftAction" method="findPage">
+			<result name="success">/jsp/softmanager/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="SoftAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+		<!-- 下载 -->
+		<action name="download" class="SoftAction" method="download">
+			<result name="success" type="stream">  
+		        <param name="contentType">application/octet-stream;charset=UTF-8</param>  
+		        <param name="contentDisposition">attachment;filename="${apkFileName}"</param>  
+		        <param name="inputName">apkFile</param>  
+		    </result>
+		</action>		
+	</package>
+</struts>

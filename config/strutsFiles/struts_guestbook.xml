@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="guestbook" extends="karaoke" namespace="/guestbook">
+		<!--  后台留言管理GuestBookAction -->
+   		<action name="guestBookAction_*" class="GuestBookAction" method="{1}">
+   			<result name="list" >
+   				/jsp/guestbook/guestBookList.jsp
+   			</result>
+   			<result name="view">
+   				/jsp/guestbook/viewGuestBook.jsp
+   			</result>
+   			<result name="redirectList" type="redirectAction">
+   				<param name="actionName">guestBookAction_home</param>
+   				<param name="namespace">/guestbook</param>
+   			</result>
+   		</action>
+	</package>
+</struts>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.SongCategoryDetail" table="song_category_detail"  >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="category" column="category_id"  class="com.boyue.karaoke.model.SongCategory"
+			lazy="false" fetch="join" />
+        <many-to-one name="song" column="song_id"  class="com.boyue.karaoke.model.Song"
+			lazy="false" fetch="join" />
+    </class>
+</hibernate-mapping>

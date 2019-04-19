@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.Device" table="device" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+         <property name="categoryId" type="java.lang.Integer">
+            <column name="category_id"  >
+                <comment> </comment>
+            </column>
+        </property>
+        <property name="mac" type="java.lang.String">
+            <column name="mac" length="50" not-null="true">
+                <comment>设备ID</comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" not-null="true">
+                <comment>状态1:启用,2停用, 3 已删除</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="250">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="create_date"  >
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="runStatus" type="java.lang.Integer">
+            <column name="run_status">
+                <comment>运行状态:1良好</comment>
+            </column>
+        </property>
+        <property name="categoryName" type="java.lang.String">
+            <column name="category_name" length="30" />
+        </property>
+        <property name="softVersion" type="java.lang.String">
+            <column name="soft_version" length="30" />
+        </property>
+        <property name="connectTime" type="java.util.Date">
+            <column name="connect_time"  >
+                <comment>连接时间</comment>
+            </column>
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="user_name" length="30">
+                <comment>设备名</comment>
+            </column>
+        </property>
+        <property name="ipaddr" type="java.lang.String">
+            <column name="ipaddr" length="50">
+                <comment>ip地址</comment>
+            </column>
+        </property>
+        <property name="startTime" type="java.util.Date">
+            <column name="start_time"  >
+            </column>
+        </property>
+        <property name="endTime" type="java.util.Date">
+            <column name="end_time" length="50">
+            </column>
+        </property>
+        <property name="position" type="java.lang.String">
+            <column name="position" >
+            </column>
+        </property>
+        <many-to-one name="product" column="product_id" class="com.boyue.karaoke.model.Product"
+			lazy="false" fetch="join" />
+    </class>
+</hibernate-mapping>

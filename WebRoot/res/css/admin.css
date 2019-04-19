@@ -1,0 +1,40 @@
+body {
+	font-size: 12px;
+}
+
+
+.text_w150 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:150px;
+    text-align: center;
+    display:block;/*定义为块级*/
+}
+
+
+.page_table{ margin:2px auto 0; border-collapse:collapse;border: 0px;}
+.page_table tr{ margin:0; padding:0;}
+.page_table tr td{ margin:0; padding:5px;  height:25px; line-height:25px; text-align:left; color:#6d7275; font-size:12px;border: none;}
+.page_table tr td.tth{ padding:5px; background:#e9e7e7;}
+.page_table tr.Header td{ text-align:center; background:#edebeb;}
+.page_table tr td a{ text-decoration:none; color:#6d7275; font-size:12px;}
+.page_table tr td a:hover{  text-decoration:none;  font-size:12px;}
+.page_table tr td a:link { 
+     text-decoration:none;  font-size:12px;
+    }
+.page_table tr td a:visited {
+   text-decoration:none;  font-size:12px;
+    }
+    
+A {text-decoration: none;} 
+A: hover {text-decoration: underline;}
+
+
+
+.listtable {
+	border-collapse:collapse;border: 1px solid #cecece;margin: 10px;
+}
+.listtable tr th{ height:37px; line-height:37px; background:#edebeb; color:#6d7275; font-size:13px;border:1px solid #cecece;}
+.listtable tr td {height:30px; line-height:30px; background:#edebeb; color:#6d7275; font-size:13px;border:1px solid #cecece;}
+

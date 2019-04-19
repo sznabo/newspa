@@ -1,0 +1,40 @@
+body,td {
+	font-size: 12px;
+}
+ 
+a {text-decoration:none;cursor:pointer;border:0px;margin:0px;padding:0px;}
+a:link{color:#004276;}
+a:visited{color:#004276;}
+a:hover{text-decoration:underline;color:#ba2636;}
+img {border-width: 0px 0px 0px 0px;}
+
+.texthidden{
+     width:200px;
+     overflow:hidden;
+     text-overflow:ellipsis;
+}
+
+
+.texthidden_150{
+     width:150px;
+     overflow:hidden;
+     text-overflow:ellipsis;
+}
+
+.texthidden_100{
+     width:100px;
+     overflow:hidden;
+     text-overflow:ellipsis;
+}
+.texthidden_80{
+     width:80px;
+     overflow:hidden;
+     text-overflow:ellipsis;
+}
+.red {
+	color: red;
+}
+
+.td_padding_10 {
+	padding-right: 10px;
+}

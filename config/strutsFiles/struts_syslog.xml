@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="syslog" extends="karaoke" namespace="/syslog">
+		
+		
+		<!-- 列表 -->
+		<action name="list" class="SyslogAction" method="findPage">
+			<result name="success">/jsp/syslog/list.jsp</result>
+		</action>
+		
+	</package>
+</struts>

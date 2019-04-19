@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+.IndexBody{ margin:0 auto; width:100%; height:85%; }
+.IndexContent{ margin:0 auto; width:90%; height:600px; background:url(../images/IndexwWap.png) no-repeat center center; min-width:1000px; _width:expression(document.body.clientWidth < 1000 ? "1000px" : "auto");}
+
+/*  素材管理样式  */
+
+body{ width:100%; height:96%; margin:0; padding:0; font-family:"微软雅黑";}
+.Material_Background{ margin:10px auto; width:96%; height:600px; overflow:hidden; min-width:1000px; _width:expression(document.body.clientWidth < 1000 ? "1000px" : "auto"); }
+.LeftColumn{ margin:0; float:left; width:19%; height:100%; min-width:200px; _width:expression(document.body.clientWidth < 200 ? "200px" : "auto");}
+.TopColumn{ margin:0 auto; padding:0; height:50px; width:100%; }
+.TopColumn img{ border:0; margin:0; padding:0;}
+.TopColumn1{ margin:0; float:left; width:4.5%;}
+.TopColumn2{ margin:0; float:left; background:url(../images/TopColumn2.png) repeat-x; padding:8px 0; height:38px; line-height:38px; width:89%; overflow:hidden; }
+.TopColumn2 a{ text-decoration:none; color:#5294d1; font-size:17px;}
+.TopColumn2 a:hover{ text-decoration:none; color:#f59122; font-size:17px;}
+.TopColumn2 a.TopColumn2Left{ float:right; margin:0; padding:0;}
+.TopColumn2 img{ margin:0; width:15px; height:15px; border:0;}
+.TopColumn3{ margin:0; float:right; width:6.5%;}
+.BodyColumn{ margin:0 auto; padding:0;border:1px solid #499fed; background:#499fed; height:100%; width:99%; }
+.BodyColumn_list{ margin:10px auto 0; padding:0; width:90%; height:85%; overflow:hidden; background:#f0f0f0;}
+.BodyColumn_list ul{ margin:0 auto; padding:0; list-style-type:none; width:100%;}
+.BodyColumn_list li{ margin:0 auto; width:100%; padding:0; height:50px; font-family:Arial, Helvetica, sans-serif; font-size:16px; text-align:center; border-bottom:1px solid #d6d4d4;display:block;}
+.BodyColumn_list li a{ text-align:center; text-decoration:none; line-height:50px; color:#868788; background:none; display:block;}
+.BodyColumn_list li a:hover{ text-align:center; text-decoration:none; line-height:50px; color:#868788; background:#b8dbfb; display:block;}
+/**/
+.RightColumn{ margin:0; float:right; width:80%; height:100%; min-width:790px; _width:expression(document.body.clientWidth < 790 ? "790px" : "auto"); }
+.Right_TopColumn{ margin:0 auto; height:50px; width:100%; position:relative; }
+.Right_TopColumn img{ border:0; margin:0; padding:0;}
+.Right_TopColumn1{ margin:0; width:1%; float:left; height:50px;}
+.Right_TopColumn2{ margin:0; float:left; background:url(../images/TopColumn2.png) repeat-x; padding:8px 0; height:38px; line-height:35px; width:97%; overflow:hidden;}
+.Right_TopColumn2 ul{ margin:0; list-style-type:none; padding:0;}
+.Right_TopColumn2 li{ margin:0 auto; float:left; width:12%; font-size:15px; text-align:center; height:33px; min-width:63px; _width:expression(document.body.clientWidth < 63 ? "63px" : "auto");}
+.Right_TopColumn2 li a{ text-decoration:none; text-align:center; color:#5294d1; font-size:18px;}
+.Right_TopColumn2 li a:hover{ text-decoration:none; text-align:center; color:#f59122; font-size:18px; border-bottom:2px solid #f59122;}
+.Right_TopColumn2 img{ margin:0; width:17px; height:17px; border:0;}
+.Right_TopColumn2 li.currentHover a{  color:#f59122; border-bottom:2px solid #f59122;}
+.Right_TopColumn3{ margin:0; float:right; width:2%; height:50px;}
+.Right_BodyColumn{ margin:0 auto; border:1px solid #499fed; background:#499fed; height:100%; width:99.8%;}
+.Right_BodyColumn_list{ margin:10px auto 0; padding:10px 0; width:98%; height:82%; background:#f0f0f0; position:relative; }
+
+.ProgramList_Search{ margin:8px auto 0; height:40px; width:96%; padding:6px 0; overflow:hidden; color:#777777; }
+.Search{ margin:4px 0 0 0; float:left; font-size:14px; color:#868788; }
+.Search input.Sear{ height:30px; margin:0; width:60px; color:#777777;}
+.Search input.arch{ height:22px; margin:0; width:130px; border:1px solid #d6d4d4; background:#ffffff;}
+.add_dar{ margin:0; float:right; height:40px; font-size:14px;}
+.add_dar img{ margin:0; padding:0; border:0;}
+.add_darImg1{ width:18px; height:40px; margin:0; float:left;}
+.add_darImg2{ width:18px; height:40px; margin:0; float:left;}
+.add_darBackground{ margin:0; float:left;  height:40px; padding:0; background:url(../images/icons_02.png) repeat-x; }
+.add_darBackground a{ text-decoration:none; margin:0 4px; padding:0; color:#777777; line-height:40px;}
+.add_darBackground a:hover{ text-decoration:none; margin:0 4px; padding:0; line-height:40px; color:#666666;}
+.add_darBackground img{ margin:0; border:0; width:12px; height:12px;}
+
+
+/*  图片----修改文件  */
+.table3{ border:1px solid #cecece; border-collapse:collapse; margin:10px auto; width:96%; color:#777777; font-size:15px; }
+.table3 td{ border:1px solid #cecece; border-collapse:collapse; margin:0; padding:4px 10px;}
+.table3 tr{ height:35px; margin:0;}
+.table3 tr td.td{ text-align:right;}
+.table3 tr td input.SelectFile{ height:26px; margin:0; width:90px; }
+.table3 tr td input.submit ,.table3 tr td input.back{height:26px; margin:0; width:70px;}
+/*   翻页  */
+.Page{ margin:15px auto 0; width:74%; min-width:550px; border-collapse:collapse; text-align:center; font-size:13px; color:#888888; padding:4px 0; position:absolute; bottom:15px;}
+.Page span{ margin:0 13px; font-size:15px;}
+.Page a img{ border:0;}
+.Page a.After{ color:#ccd0d3;}
+.Page a:hover.After{ color:#ccd0d3;}
+.Page a{ text-decoration:none; margin:0 7px; color:#888888;}
+.Page a:hover{ text-decoration:none; margin:0 7px; color:#999999;}
+
+
+.ContentInformation{ margin:10px auto 0;width:97%; height:409px; overflow:hidden;}
+.table2{ border:1px solid #cecece; border-collapse:collapse;}
+.table2 th, .table2 td{ border-bottom:1px solid #cecece; border-collapse:collapse;}
+.table2{ margin:0 0 10px 0; width:100%;  min-width:550px; border-collapse:collapse;}
+.table2 tr{ margin:0; padding:0;  height:36px; line-height:36px;}
+.table2 tr th{ margin:0; padding:0;  height:37px; line-height:37px; color:#6d7275; font-weight:inherit; font-size:16px; text-align:center; background:url(../images/bacc1.jpg) repeat-x;}
+.table2 tr th.tth{ padding:0 0 0 5px; background:#e9e7e7;}
+.table2 tr.Header th{ text-align:center; background:#edebeb;}
+.table2 tr td{ margin:0; padding:0; color:#818689; font-size:16px; text-align:center;}
+.table2 tr td a{ text-decoration:none; color:#1588f1; font-size:13px;}
+.table2 tr td a:hover{ text-decoration:none; font-size:13px;}
+
+.categoryOver { text-align:center; text-decoration:none; line-height:50px; color:#868788; background:#b8dbfb; display:block;}

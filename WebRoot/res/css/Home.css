@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.HomeBody{ margin:0 auto; width:100%; height:85%;}
+.Container{ margin:0 auto; width:1000px;  height:600px; background:url(../images/wap.png) no-repeat;}
+.HomeRight{ float:right; margin:0; width:370px; }
+.login{ margin:0; height:100px; padding-top:10px;}
+.login1{ margin:0; width:34px; float:left;}
+.login2{ margin:0; float:left; background:url(../images/log2.png) repeat-x; color:#dae8f9; font-size:12px; display:block; line-height:60px; padding:2px 0; height:60px;  width:280px; overflow:hidden;}
+.login2 em{ color:#dae8f9;}
+.login2 span a{ color:#dae8f9; margin:0; text-decoration:none;}
+.login2 span a:hover{ color:#dededc; margin:0; text-decoration:none;}
+.login3{ margin:0; width:51px; float:left;}
+
+.HomeContent{ margin:0; width:600px; float:left; position:relative; }
+.HomeContent ul{ margin:0; list-style-type:none; }
+.HomeContent li{ width:220px; height:250px; margin:0;}
+.uploadLi{ margin:0; position:absolute; top:120px; left:30px;}
+.programLi{ margin:0; position:absolute; top:30px; left:270px;}
+.prog{ margin:0; position:absolute; top:120px; right:-10px;}
+.releaseLi{ margin:0; position:absolute; top:330px; right:35px;}
+.statusLi{ margin:0; position:absolute; top:360px; left:150px;}
+.HomeContent li a{ overflow:hidden;}
+.HomeContent li a:hover{ overflow:hidden;}
+.uploadLi img{ margin:0;  border:0; width:220px; height:250px;}
+.programLi img{ margin:0; border:0; width:160px; height:182px;}
+.prog img{ margin:0;  border:0; width:170px; height:193px;}
+.releaseLi img{ margin:0; border:0; width:190px; height:216px;}
+.statusLi img{ margin:0; border:0; width:210px; height:239px;}
+
+.Terminal{ margin:0 auto; padding:0; clear:both; width:230px;}
+.Terminal1{ margin:0; padding:20px 30px 20px 10px; background:url(../images/Terminal_background.png) no-repeat; width:180px; height:210px; text-align:right; overflow:hidden;}
+.Online,.Offline,.No_Entry{ margin:7px 0 0 0; padding:0; color:#ffffff; font-size:15px;}
+.Online span,.Offline span,.No_Entry span{ margin:0 0 0 4px; position:relative; top:-15px; left:0px; }
+.Online span a{ color:#b5ae04;  margin:0 4px;}
+.Offline span a,.No_Entry span a{ color:#c0c0ba; margin:0 4px;}
+.Online img, .Offline img, .No_Entry img{ width:40px; height:40px; border:0;}

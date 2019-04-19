@@ -1,0 +1,46 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="ad" extends="karaoke" namespace="/ad">
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="AdAction" method="toUpdate">
+			<result name="success" >/jsp/ad/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="AdAction" method="update">
+			<result name="input">/jsp/ad/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="AdAction" method="findPage">
+			<result name="success">/jsp/ad/list.jsp</result>
+		</action>
+		
+		<action name="add" class="AdAction" method="add">
+			<result name="success">/jsp/ad/addAd.jsp</result>
+		</action>
+		
+		<action name="saveAd" class="AdAction" method="saveAd">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<action name="edit" class="AdAction" method="edit">
+			<result name="success">/jsp/ad/editAd.jsp</result>
+		</action>
+		
+		<action name="updateAd" class="AdAction" method="updateAd">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<action name="delete" class="AdAction" method="delByIDs">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<action name="checkIsAd" class="AdAction" method="checkIsAd">
+		</action>
+	</package>
+</struts>

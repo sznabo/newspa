@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">  
+<taglib>  
+    <tlib-version>1.0</tlib-version>  
+    <jsp-version>1.2</jsp-version>  
+    <short-name>boyueTags</short-name>  
+    <uri>/boyueTags</uri>  
+    <display-name>boyue Tags</display-name>  
+    <tag>  
+        <name>fileUpload</name>  
+        <tag-class>com.boyue.framework.web.tag.FileUploadTag</tag-class>  
+        <body-content>empty</body-content>  
+        <attribute>  
+            <name>uploadSavePath</name>  
+            <required>true</required>  
+            <!-- 可用使用jsp表达式 -->
+            <rtexprvalue>true</rtexprvalue>  
+        </attribute>
+        <attribute>  
+            <name>name</name>  
+            <required>true</required>  
+        </attribute>  
+        <attribute>  
+            <name>id</name>  
+            <required>true</required>  
+        </attribute>
+    </tag>
+</taglib> 
