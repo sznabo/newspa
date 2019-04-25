@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.Technician" table="technician" >
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" not-null="true">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property name="namee" type="java.lang.String">
+            <column name="namee" length="30" not-null="true">
+                <comment>英文名称</comment>
+            </column>
+        </property>
+        <property name="name_jap" type="java.lang.String">
+            <column name="name_jap" length="30">
+            </column>
+        </property>
+        <property name="name_kor" type="java.lang.String">
+            <column name="name_kor" length="30">
+            </column>
+        </property>
+        <property name="img" type="java.lang.String">
+            <column name="img" length="300" not-null="true">
+                <comment>图片</comment>
+            </column>
+        </property>
+        <property name="number" type="java.lang.Integer">
+            <column name="number" not-null="true">
+                <comment>编号</comment>
+            </column>
+        </property>
+        <property name="sex" type="java.lang.Integer">
+            <column name="sex" not-null="true">
+                <comment>性别 0 男 1 女</comment>
+            </column>
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" not-null="true">
+                <comment>年龄</comment>
+            </column>
+        </property>
+        <property name="heigh" type="java.lang.Integer"> 
+            <column name="heigh" not-null="true">
+                <comment>身高</comment>
+            </column>
+        </property>
+        
+         <property name="typeId" type="java.lang.Integer"> 
+            <column name="type_id" not-null="true">
+                <comment>分类外键id</comment>
+            </column>
+        </property>
+         <property name="levelId" type="java.lang.Integer"> 
+            <column name="level_id" not-null="true">
+                <comment>级别外键id</comment>
+            </column>
+        </property>
+        <property name="nativePlace" type="java.lang.String">
+            <column name="native_place" not-null="true">
+                <comment>籍贯</comment>
+            </column>
+        </property>
+         <property name="nativePlacee" type="java.lang.String">
+            <column name="native_placee" not-null="true">
+                <comment>英文籍贯</comment>
+            </column>
+        </property>
+           <property name="onDuty" type="java.lang.Integer">
+            <column name="on_duty" not-null="true">
+                <comment>是否当值 0否1是</comment>
+            </column>
+        </property>
+        
+        <property name="status" type="java.lang.Integer">
+            <column name="status" not-null="true">
+                <comment>状态 0 空闲 1 忙碌</comment>
+            </column>
+        </property>
+        <property name="scopeService" type="java.lang.String">
+        	<column name="scope_service" >
+        		<comment>服务范围</comment>
+        	</column>
+        </property>
+    </class>
+</hibernate-mapping>

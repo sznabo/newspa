@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.DishStyle" table="dishstyle" >
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" not-null="true">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property name="namee" type="java.lang.String">
+            <column name="namee" length="30" not-null="true">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property name="name_jap" type="java.lang.String">
+            <column name="name_jap" length="30">
+            </column>
+        </property>
+        <property name="name_kor" type="java.lang.String">
+            <column name="name_kor" length="30">
+            </column>
+        </property>
+        <property name="img" type="java.lang.String">
+            <column name="img" length="100" not-null="true">
+                <comment>图片地址</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

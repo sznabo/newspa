@@ -1,0 +1,32 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="liveCategory" extends="karaoke" namespace="/liveCategory">
+
+		
+		<!-- 进入更新页面 -->
+		<action name="toUpdate" class="LiveCategoryAction" method="toUpdate">
+			<result name="success" >/jsp/LiveCategory/edit.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="LiveCategoryAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="LiveCategoryAction" method="findPage">
+			<result name="success">/jsp/LiveCategory/list.jsp</result>
+		</action>
+	
+		<!-- 进入选择页面 -->
+		<action name="toSelect" class="LiveCategoryAction" method="toSelect">
+			<result name="success" >/jsp/LiveCategory/select.jsp</result>
+		</action>
+		
+		<action name="select" class="LiveCategoryAction" method="select">
+			<result name="success" type="redirectAction">toSelect</result>
+		</action>
+	</package>
+</struts>

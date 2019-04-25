@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="index" extends="karaoke" namespace="/index">
+		<action name="index" class="IndexAction" method="index">
+			<result name="success">/jsp/index.jsp</result>
+		</action>
+		
+		<action name="home" class="IndexAction" method="home">
+			<result name="success">/jsp/home.jsp</result>
+		</action>
+		
+		<action name="home1" class="IndexAction" method="home1">
+			<result name="success">/jsp/home1.jsp</result>
+		</action>
+	</package>
+</struts>

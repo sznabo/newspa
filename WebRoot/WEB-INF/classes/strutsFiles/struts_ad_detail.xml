@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="addetail" extends="karaoke" namespace="/addetail">
+		
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="AdDetailAction" method="toAdd">
+			<result name="success">/jsp/addetail/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="AdDetailAction" method="save">
+			<result name="input">/jsp/addetail/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="AdDetailAction" method="toUpdate">
+			<result name="success" >/jsp/addetail/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="AdDetailAction" method="update">
+			<result name="input">/jsp/addetail/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="AdDetailAction" method="findPage">
+			<result name="success">/jsp/addetail/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="AdDetailAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+		
+		<action name="updateContentType" class="AdDetailAction" method="updateContentType">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+		
+	</package>
+</struts>

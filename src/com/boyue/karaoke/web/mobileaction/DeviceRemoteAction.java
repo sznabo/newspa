@@ -30,6 +30,7 @@ import com.boyue.framework.web.Response;
 import com.boyue.karaoke.common.Constants;
 import com.boyue.karaoke.common.DateResult;
 import com.boyue.karaoke.common.SystemConfig;
+import com.boyue.karaoke.dao.BigCatDAO;
 import com.boyue.karaoke.dao.PlayDAO;
 import com.boyue.karaoke.model.Ad;
 import com.boyue.karaoke.model.AdDetail;
@@ -68,6 +69,7 @@ import com.boyue.karaoke.service.AdDetailService;
 import com.boyue.karaoke.service.AdService;
 import com.boyue.karaoke.service.AppCategoryService;
 import com.boyue.karaoke.service.AppInfoService;
+import com.boyue.karaoke.service.BigCatService;
 import com.boyue.karaoke.service.CustomercaseService;
 import com.boyue.karaoke.service.DeviceService;
 import com.boyue.karaoke.service.DiscountService;
@@ -122,6 +124,8 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 	
 	private static final Logger LOG = LogManager.getLogger(DeviceRemoteAction.class);
 	
+	@Autowired
+	private BigCatService bigCatService;
 	@Autowired
 	private DeviceService deviceService;
 	@Autowired
@@ -1055,6 +1059,15 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 		return JSON_RESULT;
 	}
 	
+	//获取音量信息
+	
+	public String getVolume() {
+		TemlCfg v = temlCfgService.findByKey("volume");
+		String volume = v.getValue();
+		this.ajaxResponse.setMsgBody(volume);
+		return JSON_RESULT;
+	}
+	
 	// 获取第三方直播信息
 	public String getLiveApk(){
 		if (!checkMac() || !checkShouquan()) {
@@ -1120,6 +1133,13 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 			this.ajaxResponse.setMsgBody("该设备已过期！");
 			a = false;
 		}
+		 
+		 int f = bigCatService.findByStatu();
+		 if(f==0) {
+			 this.ajaxResponse.setServerCode(ajaxResponse.FAIL);
+				this.ajaxResponse.setMsgBody("请联系纳博管理员陈文杰，他关的你服务器！^_^");
+				a = false;
+		 }
 		return a;
 		
 	}
@@ -1139,6 +1159,7 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 	* @throws  
 	*/  
 	public String insertMacByAuto_Username() {
+		
 		if (!checkMac()) {
 			Integer count = this.deviceService.findByMaxCount();
 			this.device = new Device();
@@ -1555,6 +1576,41 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 	     }
 	   }
 	
+	/**
+	 * 获取客户酒店名称
+	 * @return
+	 */
+	public String getKehu() {
+		HotelRegister h = hotelService.findById(1);
+		this.ajaxResponse.setMsgBody(h);
+	     return JSON_RESULT; 
+	}
+	
+	/**
+	 * 获取客户mac
+	 * @return
+	 */
+	public String getKehuMac() {
+		List<Device> f = deviceService.findAll();
+		this.ajaxResponse.setMsgBody(f);
+	     return JSON_RESULT; 
+	}
+	
+	/**
+	 * 更新状态0
+	 * @return
+	 */
+	public void updateState_x0() {
+		bigCatService.updateStatus0();
+	}
+	/**
+	 * 更新状态1
+	 * @return
+	 */
+	public void updateState_x1() {
+		bigCatService.updateStatus1();
+		
+	}
 	
 	public Integer getParentId() {
 		return ParentId;

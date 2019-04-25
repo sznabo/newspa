@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.AppInfo" table="app_info"  >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="category" type="java.lang.Integer">
+            <column name="category" not-null="true">
+                <comment>1直播，2在线影音,3生活市场</comment>
+            </column>
+        </property>
+        <property name="appName" type="java.lang.String">
+            <column name="app_name" length="30" not-null="true">
+                <comment>app名称</comment>
+            </column>
+        </property>
+        <property name="appNamee" type="java.lang.String">
+            <column name="app_namee" length="30" not-null="true">
+                <comment>英文app名称</comment>
+            </column>
+        </property>
+        <property name="appName_jap" type="java.lang.String">
+            <column name="app_name_jap" length="30" >
+            </column>
+        </property>
+        <property name="appName_kor" type="java.lang.String">
+            <column name="app_name_kor" length="30" >
+            </column>
+        </property>
+        <property name="path" type="java.lang.String">
+            <column name="path" length="250" not-null="true">
+                <comment>存储的相对地址</comment>
+            </column>
+        </property>
+        <property name="packageName" type="java.lang.String">
+            <column name="package_name" length="250" not-null="true">
+                <comment>包名</comment>
+            </column>
+        </property>
+        <property name="icon" type="java.lang.String">
+            <column name="icon" length="250" not-null="true">
+                <comment>图标</comment>
+            </column>
+        </property>
+        <property name="kind" type="java.lang.Integer">
+            <column name="kind" >
+                <comment>1视频 2购物 3游戏 4新闻</comment>
+            </column>
+        </property>
+        <property name="position" type="java.lang.Integer">
+            <column name="position" >
+                <comment>位置</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

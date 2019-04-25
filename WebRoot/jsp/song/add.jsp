@@ -148,7 +148,7 @@ if(a==1){
     <th scope="row" align="right">歌曲图片 ：</th>
     <td>
     	<b:fileUpload uploadSavePath="upload/song_file/" name="song.logo" id="logo"/>
-    	<font style="color: red;">*</font>
+    	<font style="color: red;">不选图片则设置默认图片</font>
     </td>
   </tr>
   <tr style="display: none;">

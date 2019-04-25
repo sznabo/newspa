@@ -1,0 +1,34 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="technician" extends="karaoke" namespace="/technician">
+		<!--  技师   -->
+		
+	    <!-- 列表 -->
+		<action name="list" class="TechnicianAction" method="home">
+			<result name="success">/jsp/technician/technicianList.jsp</result>
+		</action>
+		
+   		<!-- 进入更新页面 -->
+		<action name="toupdate" class="TechnicianAction" method="toUpdate">
+			<result name="success" >/jsp/technician/editTechnician.jsp</result>
+		</action>
+		<!-- 更新 -->
+		<action name="update" class="TechnicianAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+
+		<action name="toadd" class="TechnicianAction" method="toadd">
+			<result name="success">/jsp/technician/addTechnician.jsp</result>
+		</action>
+		
+		<action name="add" class="TechnicianAction" method="add">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<action name="delete" class="TechnicianAction" method="deleteIds">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+	</package>
+</struts>

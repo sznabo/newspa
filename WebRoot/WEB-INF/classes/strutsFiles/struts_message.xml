@@ -1,0 +1,49 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="message" extends="karaoke" namespace="/message">
+		
+		<action name="pagemessageAction" class="MessageAction" method="findPage">
+			<result name="list">/jsp/message/listmessage.jsp</result>
+		</action>
+		
+		<action name="addmessageAction" class="MessageAction" method="addMessage">
+			<result name="toadd">/jsp/message/addmessage.jsp</result>
+		</action>
+		
+		<action name="savemessageAction" class="MessageAction" method="save">
+			<!-- <result name="list">/jsp/message/listmessage.jsp</result> -->
+			<result name="redirectList" type="redirectAction">
+				<param name="actionName">pagemessageAction</param>
+				<param name="namespace">/message</param>
+			</result>
+		</action>
+		
+		<action name="isExistdeviceAction" class="MessageAction" method="checkMACisExist">
+			<interceptor-ref name="adWebNoPermStack" />
+		</action>
+		
+		<action name="delmessageAction" class="MessageAction" method="delMessage">
+			<result name="list">/jsp/message/listmessage.jsp</result>
+		</action>
+		
+		<action name="deleteMsgAction" class="MessageAction" method="deleteMsg">
+			<result name="list">/jsp/message/listmessage.jsp</result>
+		</action>
+		
+		<action name="toupdatemessageAction" class="MessageAction" method="toUpdate">
+			<result name="edit">/jsp/message/editmessage.jsp</result>
+		</action>
+		
+		<action name="updatemessageAction" class="MessageAction" method="update">
+			<!-- result name="list">/jsp/message/listmessage.jsp</result> -->
+			<result name="redirectList" type="redirectAction">
+				<param name="actionName">pagemessageAction</param>
+				<param name="namespace">/message</param>
+			</result>
+		</action>
+		
+				
+	</package>
+</struts>

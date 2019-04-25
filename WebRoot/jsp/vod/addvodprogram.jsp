@@ -96,10 +96,10 @@ if(a==1){
 		return false;
 	}
 
-	if ($("#voidprogramimg").val().trim() == '') {
+	/* if ($("#voidprogramimg").val().trim() == '') {
 		alert("请选择图片");
 		return false;
-	}
+	} */
 	if ($("#types1").attr("checked")) {
 	var selectV = false;
   	$("input[name='voidpath']").each(function(){
@@ -280,7 +280,7 @@ if(a==1){
 				<th scope="row" align="right">图片：</th>
 				<td class="inp">
 					<s:file name="img" id="voidprogramimg" size="70px" ></s:file>
-					<font style="color: red; margin-left: 10">*</font>
+					<font style="color: red; margin-left: 10">不选图片则以默认图片为准</font>
 					注：图片分辨率207px * 308px
 				</td>
 			</tr>

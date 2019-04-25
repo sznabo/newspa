@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.Soft" table="soft" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" not-null="true">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property name="namee" type="java.lang.String">
+            <column name="namee" length="30">
+            </column>
+        </property>
+        <property name="name_jap" type="java.lang.String">
+            <column name="name_jap" length="30">
+            </column>
+        </property>
+        <property name="name_kor" type="java.lang.String">
+            <column name="name_kor" length="30">
+            </column>
+        </property>
+        <property name="version" type="java.lang.String">
+            <column name="version" length="30" not-null="true">
+                <comment>版本</comment>
+            </column>
+        </property>
+        <property name="packageName" type="java.lang.String">
+            <column name="package_name" length="100" not-null="true">
+                <comment>包名</comment>
+            </column>
+        </property>
+        <property name="filePath" type="java.lang.String">
+            <column name="file_path" not-null="true">
+                <comment>文件路径</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark">
+                <comment>备注</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="calling" extends="json-default" namespace="/calling">
+	    <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        	<global-results>
+			<result type="json" name="global_ajax_response">
+				<param name="root">ajaxResponse</param>
+			</result>
+			<result name="exception">/jsp/exception.jsp</result>
+			
+			<result name="web_login">/jsp/adminlogin.jsp</result>
+		</global-results>
+		<!--  后台呼叫Calling -->
+   		<action name="callingAction_*" class="CallingAction" method="{1}">
+   		
+   			<result name="list" >
+   				/jsp/calling/callingList.jsp
+   			</result>
+   		</action>
+	</package>
+</struts>

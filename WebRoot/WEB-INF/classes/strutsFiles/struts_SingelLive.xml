@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="singelLive" extends="karaoke" namespace="/singelLive">
+   		
+   		<!-- 列表 -->
+		<action name="list" class="SingelLiveAction" method="listManagement">
+			<result name="success">/jsp/singelLive/liveMangeList.jsp</result>
+		</action>
+		
+		<!-- 进入添加页面  -->
+		<action name="toAddLive" class="SingelLiveAction" method="toAddLive">
+			<result name="success">/jsp/singelLive/addLiveChannel.jsp</result>
+		</action>
+		
+		<!-- 保存  -->
+		<action name="saveLive" class="SingelLiveAction" method="saveLive">
+		    <result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 跳转到修改页面  -->
+		<action name="loadLiveByID" class="SingelLiveAction" method="loadLiveByID">
+		    <result name="modifylive" >/jsp/singelLive/LiveManagemodifyLive.jsp</result>
+		</action>
+		
+		<!-- 修改  -->
+		<action name="updateLive" class="SingelLiveAction" method="updateLive">
+		    <result name="success" type="redirectAction" >list</result>
+		</action>
+		
+		<!-- 删除  -->
+		<action name="delLive" class="SingelLiveAction" method="delLive">
+		    <result name="success" type="redirectAction" >list</result>
+		</action>
+		
+		<!-- 发布直播频道  -->
+		<action name="releaseLive" class="SingelLiveAction" method="releaseLive">
+		    <result name="success" type="redirectAction" >list</result>
+		</action>
+		
+		<!-- 撤销发布直播频道  -->
+		<action name="revokeReleaseLive" class="SingelLiveAction" method="revokeReleaseLive">
+		    <result name="success" type="redirectAction" >list</result>
+		</action>
+   		
+	</package>
+</struts>

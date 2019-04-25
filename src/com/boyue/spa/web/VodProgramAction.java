@@ -391,7 +391,13 @@ public class VodProgramAction extends BaseAction implements ModelDriven<Vodprogr
 		String vodDataPath = SystemConfig.getVodDataPath();
 		Collection<File> listFiles = FileUtils.listFiles(new File(vodDataPath), null, true);
 		for (File f : listFiles) {
-			videoFileList.add(f.getPath().replace("\\", "/").replace(vodDataPath, ""));
+			String fpath =f.getPath().replace("\\", "/").replace(vodDataPath, "");
+			int a = fpath.lastIndexOf(".");
+			String last = fpath.substring((a+1), fpath.length());
+			if(!last.equalsIgnoreCase("jpg") && !last.equalsIgnoreCase("png")) {
+				videoFileList.add(fpath);
+			}
+		//	videoFileList.add(f.getPath().replace("\\", "/").replace(vodDataPath, ""));
 		}
 	}
 	
@@ -692,6 +698,5 @@ public class VodProgramAction extends BaseAction implements ModelDriven<Vodprogr
 		this.messge = messge;
 	}
 	
-	
-	
+		
 }

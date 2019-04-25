@@ -1,0 +1,49 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="device" extends="karaoke" namespace="/device">
+		
+		<action name="pagedeciveAction" class="DeviceAction" method="findPage">
+			<result name="list">/jsp/device/listdevice.jsp</result>
+		</action>
+		
+		<action name="adddeviceAction" class="DeviceAction" method="addDevice">
+			<result name="toadd">/jsp/device/adddevice.jsp</result>
+			
+			<result name="toUp" type="redirect">pagedeciveAction.action?addmessge=${addmessge}</result>
+			
+		</action>
+		
+		<action name="savedeviceAction" class="DeviceAction" method="save">
+			<result name="success" type="redirectAction">pagedeciveAction</result>
+		</action>
+		
+		<action name="isExistdeviceAction" class="DeviceAction" method="checkMACisExist">
+			<interceptor-ref name="adWebNoPermStack" />
+		</action>
+		
+		<action name="deldeviceAction" class="DeviceAction" method="delDevice">
+			<result name="success" type="redirectAction">pagedeciveAction</result>
+		</action>
+		
+		<action name="deleteDeviceAction" class="DeviceAction" method="delDeviceById">
+			<result name="success" type="redirectAction">pagedeciveAction</result>
+		</action>
+		
+		<action name="toupdatedeviceAction" class="DeviceAction" method="toUpdate">
+			<result name="edit">/jsp/device/editdevice.jsp</result>
+			<interceptor-ref name="adWebNoPermStack" />
+		</action>
+		
+		<action name="updatedeviceAction" class="DeviceAction" method="update">
+			<result name="success" type="redirectAction">pagedeciveAction</result>
+		</action>
+		
+		<action name="callingDeviceAction" class="DeviceAction" method="callingDevice">
+			<result name="callingDevice">
+				/jsp/calling/callingList.jsp
+			</result>
+		</action>
+	</package>
+</struts>

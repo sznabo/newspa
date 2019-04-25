@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="customercase" extends="karaoke" namespace="/customercase">
+		<!--  后台留言管理customercaseAction -->
+   		<action name="CustomercaseAction_*" class="CustomercaseAction" method="{1}">
+   			<result name="list" >
+   				/jsp/customercase/customercaseList.jsp
+   			</result>
+   			
+   			<result name="add" >
+   				/jsp/customercase/addCustomercase.jsp
+   			</result>
+   			
+   			<result name="edit" >
+   				/jsp/customercase/editCustomercase.jsp
+   			</result>
+   			
+   			<result name="redirectList" type="redirectAction">
+   				<param name="actionName">CustomercaseAction_home</param>
+   				<param name="namespace">/customercase</param>
+   			</result>
+   		</action>
+	</package>
+</struts>

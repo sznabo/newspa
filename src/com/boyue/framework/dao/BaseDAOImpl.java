@@ -260,6 +260,9 @@ public abstract class BaseDAOImpl<T> implements DAO<T> {
     public int executeSql(String sql) {
     	return this.getCurrentSession().createSQLQuery(sql).executeUpdate();
     }
+    public int executeSql1(String sql) {
+    	return ((Number) this.getCurrentSession().createQuery(sql).uniqueResult()).intValue();
+    }
     
     public int executeSql(String sql, Object[] param) {  
         Query q = this.getCurrentSession().createSQLQuery(sql);  

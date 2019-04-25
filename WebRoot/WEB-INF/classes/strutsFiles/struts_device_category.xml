@@ -1,0 +1,41 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="deviceCategory" extends="karaoke" namespace="/deviceCategory">
+		
+		<!-- 进入添加页面 -->
+		<action name="toadd" class="DeviceCategoryAction" method="toAdd">
+			<result name="success">/jsp/device_category/add.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="DeviceCategoryAction" method="save">
+			<result name="input">/jsp/device_category/add.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toupdate" class="DeviceCategoryAction" method="toUpdate">
+			<result name="success" >/jsp/device_category/update.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="DeviceCategoryAction" method="update">
+			<result name="input">/jsp/device_category/update.jsp</result>
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="DeviceCategoryAction" method="findPage">
+			<result name="success">/jsp/device_category/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="DeviceCategoryAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+	</package>
+</struts>

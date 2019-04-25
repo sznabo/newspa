@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="mainAd" extends="karaoke" namespace="/mainAd">
+		
+		<!-- 进入添加页面 -->
+		<action name="toAdd" class="MainAdAction" method="toAdd">
+			<result name="success">/jsp/mainAd/addAd.jsp</result>
+		</action>
+		
+		<!-- 保存 -->
+		<action name="save" class="MainAdAction" method="save">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- 进入更新页面 -->
+		<action name="toUpdate" class="MainAdAction" method="toUpdate">
+			<result name="success" >/jsp/mainAd/editAd.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="MainAdAction" method="update">
+			
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="MainAdAction" method="findPage">
+			<result name="success">/jsp/mainAd/list.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="delete" class="MainAdAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+		</action>	
+		
+		
+	</package>
+</struts>
