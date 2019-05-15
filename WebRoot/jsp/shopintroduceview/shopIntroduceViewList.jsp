@@ -113,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post"  action="shopIntroduceAction_home.action" 
+	           <s:form method="post"  action="shopIntroduceAction_home" 
 	           						namespace="/shopintroduce" id="searchForm" >
 	          <s:if test="#session.lv == 1">
 	          		<s:hidden name="model.lv" id="lv"></s:hidden>

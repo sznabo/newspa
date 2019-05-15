@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.boyue.karaoke.model.MovieSource" table="movie_source" >
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="source_name" type="java.lang.String">
+            <column name="source_name" length="225">
+                <comment>名称</comment>
+            </column>
+        </property>
+       
+         <property name="source_state" type="java.lang.Integer">
+            <column name="source_state" not-null="true">
+                <comment>状态</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

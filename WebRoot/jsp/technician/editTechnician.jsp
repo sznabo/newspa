@@ -119,7 +119,7 @@ var a = <%=session.getAttribute("language")%>
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="technician/update.action" namespace="/technician" method="post" enctype="multipart/form-data">
+	 <s:form action="update" namespace="/technician" method="post" enctype="multipart/form-data">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 		

@@ -138,7 +138,7 @@ function changeRight(url) {
      </div>
 	 
      <div class="AlonModule_Body">
-			<s:form action="servermsg/serverMsgAction_saveServerMsg.action" method="post">
+			<s:form action="serverMsgAction_saveServerMsg" namespace="/servermsg" method="post">
 				<table width="98%" class="listtable">
 					<tr  class="TableTitle">
 						<th scope="row" align="right">标题：</th>

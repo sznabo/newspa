@@ -203,7 +203,7 @@ function showPlayType() {
      </div>
 	 
      <div class="AlonModule_Body">
-     	<s:form action="message/updatemessageAction.action" method="post">
+     	<s:form action="updatemessageAction" namespace="/message" method="post">
 		<s:hidden name="message.id" value="%{message.id}"></s:hidden>
 		<table width="98%" class="listtable">
 			<tr  class="TableTitle">

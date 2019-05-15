@@ -93,7 +93,7 @@ public class AdDetailAction extends BaseAction<AdDetail>{
 	 */
 	public String toUpdate() {
 		this.adDetail = adDetailService.findById(adDetail.getId());
-		System.out.println(adid);
+	//	System.out.println(adid);
 		this.getSessionAttr("curAd");
 		return SUCCESS;
 	}

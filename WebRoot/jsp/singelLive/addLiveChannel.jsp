@@ -215,7 +215,7 @@ var a = <%=session.getAttribute("language")%>
      </div>
     
 	 <div class="AlonModule_list">
-<s:form action="singelLive/saveLive.action" method="post" >
+<s:form action="saveLive" namespace="/singelLive" method="post" >
  <div class="AlonModule_Body">
 <table width="98%" class="listtable">
 

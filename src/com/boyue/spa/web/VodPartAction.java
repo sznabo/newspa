@@ -160,7 +160,7 @@ public class VodPartAction extends BaseAction {
 		}
 		v.setVodpartname(model.getVodpartname());
 		List<Vodpart> list = vodPartService.findIsName(v);
-		System.out.println("			" + list);
+	//	System.out.println("			" + list);
 		if (list == null || list.isEmpty()) {
 			ajaxResponse.setMsgBody(true);
 		} else {

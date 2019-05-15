@@ -223,7 +223,7 @@ if(a==1){
      </div>
 	 <div class="AlonModule_Body">
 	 <div class="AlonModule_list">
-	 <s:form action="vodProgram_saveVodProgram.action" enctype="multipart/form-data" namespace="/admin" method="post">
+	 <s:form action="vodProgram_saveVodProgram" enctype="multipart/form-data" namespace="/admin" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 		<s:hidden name="vodpartid" id="vodpartid" value="%{model.vodpartid}"></s:hidden>

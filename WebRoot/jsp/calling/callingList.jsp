@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      <div class="AlonModule_Body">
           <div class="AlonModule_list">
 	           
-	           <s:form method="post" action="callingAction_home.action" namespace="/calling">
+	           <s:form method="post" action="callingAction_home" namespace="/calling">
 	           <div class="ProgramList_Search">
                       <div class="Search">
                            &nbsp;<input class="Sear" type="submit" value="查&nbsp;询" style="margin-left:10px;"/>

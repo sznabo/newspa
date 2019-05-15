@@ -38,8 +38,8 @@ public synchronized void getsd() {
 			socket = new DatagramSocket();
 	    	byte[] buf = data.getBytes();
 	        DatagramPacket packet = new DatagramPacket(buf, buf.length,ip,port);
-	        System.out.println("发送的：");
-	        System.out.println(new String(packet.getData(),"GBK"));
+	   //     System.out.println("发送的：");
+	    //    System.out.println(new String(packet.getData(),"GBK"));
 	        socket.send(packet);
 	        socket.close();
 	        

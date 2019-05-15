@@ -101,7 +101,7 @@ function showLiveList() {
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="liveapk/update.action" namespace="/liveapk" method="post" enctype="multipart/form-data">
+	 <s:form action="update" namespace="/liveapk" method="post" enctype="multipart/form-data">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 			<tr>

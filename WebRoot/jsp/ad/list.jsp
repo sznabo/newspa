@@ -164,6 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                  		<li ><a style="white-space: nowrap;" href="<%=basePath%>admin/vodPartAction_listVodPart.action?type=goListVodPart">影片管理</a></li>
                       	<li class="currentHover"><a style="white-space: nowrap;" href="<%=basePath%>ad/list.action?showFlag=2">点播广告</a></li>
                       	<li><a href="<%=basePath%>play/list.action">切换播放引擎</a></li>
+                      	<li><a href="<%=basePath%>movieSource/list.action">切换电影源</a></li>
                  	</s:if>
                  	<s:if test="#session.showFlag == 3">
                  		<li ><a style="white-space: nowrap;" href="<%=basePath%>shopintroduce/shopIntroduceAction_home.action?model.lv=1">自助服务</a></li>

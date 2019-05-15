@@ -153,7 +153,7 @@ $(document).ready(function(){
          </div>	
 <div class="AlonModule_Body">
 	<div class="AlonModule_list">
-<s:form action="updatecity/updateCityAction_updateCity.action" method="post" onsubmit="return checkIsSelectCity()">
+<s:form action="updateCityAction_updateCity" namespace="/updatecity" method="post" onsubmit="return checkIsSelectCity()">
  <table width="100%" class="listtable">
  	<s:hidden name="capital" id="hcapital" value=""></s:hidden>
  	<s:hidden name="city" id="hcity" value=""></s:hidden>

@@ -33,7 +33,7 @@ public class InitListener implements ServletContextListener  {
 		ds.initAllDeviceOffline();
 		//启动缓存
 		//CacheManager.getInstance().startup();
-		new OnlineUserMonitor(ds).start();
+	//	new OnlineUserMonitor(ds).start();
 		//new CloundsManageTets(cl).start();
 	}
 

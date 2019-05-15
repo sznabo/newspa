@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="movieSource" extends="karaoke" namespace="/movieSource">
+		<!-- 进入更新页面 -->
+		<action name="toUpdate" class="com.boyue.karaoke.web.webaction.MovieSourceAction" method="toUpdate">
+			<result name="success" >/jsp/movie_source/playedit.jsp</result>
+		</action>
+		
+		<!-- 更新 -->
+		<action name="update" class="com.boyue.karaoke.web.webaction.MovieSourceAction" method="update">
+			<result name="success" type="redirectAction">list</result>				
+		</action>
+		
+		<!-- 列表 -->
+		<action name="list" class="com.boyue.karaoke.web.webaction.MovieSourceAction" method="findPage">
+			<result name="success">/jsp/movie_source/playlist.jsp</result>
+		</action>
+	
+		
+		
+	</package>
+</struts>

@@ -233,7 +233,7 @@ function showPlayType() {
      </div>
 	 
      <div class="AlonModule_Body">
-			<s:form action="message/savemessageAction.action" method="post">
+			<s:form action="savemessageAction" namespace="/message" method="post">
 				<table width="98%" class="listtable">
 					<tr  class="TableTitle">
 						<th scope="row" align="right">标题：</th>

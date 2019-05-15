@@ -133,7 +133,7 @@ function changeRight(url) {
      </div>
 	 
      <div class="AlonModule_Body">
-     	<s:form action="servermsg/serverMsgAction_updateServerMsg.action" method="post">
+     	<s:form action="serverMsgAction_updateServerMsg" namespace="/servermsg" method="post">
 		<s:hidden name="model.id" value="%{model.id}"></s:hidden>
 		<table width="98%" class="listtable">
 			<tr  class="TableTitle">

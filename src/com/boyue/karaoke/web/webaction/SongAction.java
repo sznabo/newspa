@@ -228,20 +228,20 @@ public class SongAction  extends DefaultBaseAction<Song> {
 							for(int k=0;k<=cols;k++){ //此时K值对应列名
 								HSSFCell col = row.getCell((short) k);
 								if(k==0){
-									System.out.println("k==0 "+result(col));
+						//			System.out.println("k==0 "+result(col));
 									s.setSongName(result(col));
 								}
 								if(k==1){
-									System.out.println("k==1 "+result(col));
+							//		System.out.println("k==1 "+result(col));
 									s.setSinger(result(col));
 									s.setSingere(result(col));
 								}
 								if(k==2){
-									System.out.println("k==2 "+result(col));
+							//		System.out.println("k==2 "+result(col));
 									s.setMusicFile(result(col));
 								}
 								if(k==3){
-									System.out.println("k==3 "+result(col));
+							//		System.out.println("k==3 "+result(col));
 									s.setLogo(result(col));
 								}
 							}

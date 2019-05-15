@@ -127,7 +127,7 @@ public class CallingServiceImpl implements ICallingService {
 				unReadCount++;
 			}
 		}
-		System.out.println("已定时删除前1小时呼叫信息中已读条数：" + readCount);
-		System.out.println("已定时删除超出24小时后呼叫信息中未读条数：" + unReadCount);
+	//	System.out.println("已定时删除前1小时呼叫信息中已读条数：" + readCount);
+	//	System.out.println("已定时删除超出24小时后呼叫信息中未读条数：" + unReadCount);
 	}
 }

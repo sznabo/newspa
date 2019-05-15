@@ -73,6 +73,7 @@ var a = <%=session.getAttribute("language")%>
                       <li class="currentHover"><a style="white-space: nowrap;" href="<%=basePath%>admin/vodPartAction_listVodPart.action?type=goListVodPart">影片管理</a></li>
                       <li><a style="white-space: nowrap;" href="<%=basePath%>ad/list.action?showFlag=2&firstFlag=true">点播广告</a></li> 
                       <li><a style="white-space: nowrap;" href="<%=basePath%>play/list.action">切换播放引擎</a></li> 
+                      <li><a style="white-space: nowrap;" href="<%=basePath%>movieSource/list.action">切换电影源</a></li>
                  </ul>
            </div>
            <div class="AlonModule_Top3"><img alt="" src="<%=basePath%>res/images/TopColumn3.png"/></div>

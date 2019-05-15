@@ -230,8 +230,8 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 	
 	public Map remoteRequest(SingelLive liv) throws Exception{
 		Map map = new HashMap<Integer, String>();
-		System.out.println(map.size());
-		System.out.println(map.isEmpty());
+	//	System.out.println(map.size());
+	//	System.out.println(map.isEmpty());
 		//数据库服务器
 //		List<Service1> serlist = new ArrayList<Service1>();
 //		serlist = servicerMngService.loadServicerByServisType(Constants.ServerType.P2P_SERVER);
@@ -288,7 +288,7 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 						 "name="+livname+"&"+ftdsid+"&submit=%E6%8F%90%E4%BA%A4&" +
 						 "time="+time+"&key="+key+"&ai_cdn=0";		
 			
-			System.out.println(str);
+		//	System.out.println(str);
 			try {
 				URL url = new URL(str);
 				try {
@@ -301,7 +301,7 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 					BufferedReader buff = new BufferedReader(in);
 					while((buff.readLine())!=null){
 						str2 += buff.readLine();
-						System.out.println(buff.readLine());
+				//		System.out.println(buff.readLine());
 					}
 					
 					buff.close();
@@ -313,14 +313,14 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 						String[] str4 = str3[m].split("=");
 						for(int k=1;k<str4.length;k++){
 							String[] str5 = str4[k].split("\"");
-							System.out.println(str5[1]);
+					//		System.out.println(str5[1]);
 							map.put(m, str5[1]);
 						}
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace(); 
-					System.out.println("==============处理异常=================");
+			//		System.out.println("==============处理异常=================");
 				}
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
@@ -435,7 +435,7 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 						String[] str4 = str3[m].split("=");
 						for(int k=1;k<str4.length;k++){
 							String[] str5 = str4[k].split("\"");
-							System.out.println(str5[1]);
+					//		System.out.println(str5[1]);
 							map.put(m, str5[1]);
 						}
 					}
@@ -510,7 +510,7 @@ public class SingelLiveAction extends DefaultBaseAction<SingelLive> {
 		}
 		stringBuffer.append(")");
 		hql = stringBuffer.toString();
-		System.out.println(hql);
+	//	System.out.println(hql);
 		return hql;
 	}
 	

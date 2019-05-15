@@ -137,7 +137,7 @@ if(a==1){
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list">
-	 <s:form action="dish/add.action" enctype="multipart/form-data" namespace="/dish" method="post">
+	 <s:form action="add" enctype="multipart/form-data" namespace="/dish" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 			<tr>

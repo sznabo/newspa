@@ -211,7 +211,7 @@ if(a==1){
 
 			<div class="AlonModule_list">
 
-				<s:form method="post" action="admin/vodProgram_viewVodprogram.action" namespace="/admin" id="searchForm">
+				<s:form method="post" action="vodProgram_viewVodprogram" namespace="/admin" id="searchForm">
 					<div class="ProgramList_Search">
 						<div class="Search">
 						<div class="add_darImg1"></div>
@@ -248,7 +248,7 @@ if(a==1){
 						</div>
 					</div>
 				</s:form>
-				  <s:form action="admin/vodProgram_macRead.action" namespace="/admin" method="post" enctype="multipart/form-data">
+				  <s:form action="vodProgram_macRead" namespace="/admin" method="post" enctype="multipart/form-data">
                   <input type="submit" class="right-button08" value="批量导入" onclick=" return macLead();" style="margin-left: 60px;margin-right:5px" />
 		  		    <s:file name="xls" id="xls" size="40"></s:file>
 		  		   <font style="color: red;size: 15px"><span id="error2"></span></font>
@@ -281,7 +281,7 @@ if(a==1){
 						</tr>
 
 						<s:form namespace="/admin"
-							action="admin/vodProgram_delVodprogram.action" method="post"
+							action="vodProgram_delVodprogram" method="post"
 							id="delForm" cssClass="delForm">
 							<s:hidden name="model.vodpartid" id="vodpartid"></s:hidden>
 							<s:iterator value="pageBean.elements" id="item" status="st">

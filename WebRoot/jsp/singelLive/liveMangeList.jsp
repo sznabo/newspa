@@ -231,7 +231,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    <th scope="col" width="15%" height="30" class="STYLE1" nowrap="nowrap" bgcolor="#EEEEEE" >操作</th>
 					  </tr>
 					  
-					 <s:form namespace="/singelLive" action="list.action?type=goListLiveMange" method="post" id="delForm" cssClass="delForm">
+					 <s:form namespace="/singelLive" action="list?type=goListLiveMange" method="post" id="delForm" cssClass="delForm">
 					  <s:iterator value="pageBean.elements" id="item" status="st">
 					  <tr id="otd">
 					    <td class="check" width="2%"><input type="checkbox" ifable="${ifable}" class="checkCls" id="liveManagementId" name="idList" value="${id}"/></td>

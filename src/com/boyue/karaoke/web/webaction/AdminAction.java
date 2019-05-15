@@ -67,7 +67,7 @@ public class AdminAction extends DefaultBaseAction<Admin> {
 			}
 			
 			String hardInfo = HardInfoUtil.getInfo();
-			System.out.println("电脑本地"+hardInfo+"      授权文件："+info.getHardInfo());
+		//	System.out.println("电脑本地"+hardInfo+"      授权文件："+info.getHardInfo());
 			//检测时间是不是过期了
 			if (!info.isNotLimitUserTime() && (new Date().getTime() > info.getDateTo().getTime())) {
 //				ActionContext.getContext().put(Constants.SYS_PERMISSION_ERROR, "系统授权已经过期:" + info.getDateTo());

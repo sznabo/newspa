@@ -40,7 +40,7 @@ public class ZipTools {
 		}
 
 		zip(out, inputFile, "", isDelete);// 递归压缩方法
-		System.out.println("Zip Done.");
+	//	System.out.println("Zip Done.");
 		out.close();
 	}
 
@@ -58,7 +58,7 @@ public class ZipTools {
 	private void zip(ZipOutputStream out, File f, String base, boolean isDelete)
 			throws Exception {
 
-		System.out.println("Zipping : " + f.getPath()); // 记录日志，开始压缩
+	//	System.out.println("Zipping : " + f.getPath()); // 记录日志，开始压缩
 		if (f.isDirectory()) { // 如果是文件夹，则获取下面的所有文件
 			File[] fl = f.listFiles();
 			out.putNextEntry(new ZipEntry(base + "/"));
@@ -113,11 +113,11 @@ public class ZipTools {
 			file = new File(fileSavePath + entry.getName());
 			if (entry.isDirectory()) {
 				// 目录
-				System.out.println("create dir : " + file.getPath());
+		//		System.out.println("create dir : " + file.getPath());
 				file.mkdirs();
 			} else {
 				// 文件
-				System.out.println("create file: " + file.getPath());
+		//		System.out.println("create file: " + file.getPath());
 				fos = new FileOutputStream(file);
 				while ((b = zis.read()) != -1) {
 					fos.write(b);
@@ -131,7 +131,7 @@ public class ZipTools {
 			new File(zipFilePath).delete();
 		}
 
-		System.out.println("unZip Done.");
+	//	System.out.println("unZip Done.");
 
 	}
 

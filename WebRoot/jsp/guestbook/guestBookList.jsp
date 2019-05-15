@@ -73,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post" action="guestBookAction_home.action" namespace="/guestbook" id="searchForm" >
+	           <s:form method="post" action="guestBookAction_home" namespace="/guestbook" id="searchForm" >
 	           <div class="ProgramList_Search">
 	           		
 	                         <div class="Search">

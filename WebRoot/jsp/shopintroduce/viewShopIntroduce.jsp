@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="shopIntroduceAction_viewIntroduce.action" namespace="/shopintroduce" method="post">
+	 <s:form action="shopIntroduceAction_viewIntroduce" namespace="/shopintroduce" method="post">
      <div class="AlonModule_Body"  >
 		<table width="10%" class="listtable">
 		<s:hidden name="model.id" ></s:hidden>

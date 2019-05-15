@@ -37,8 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <div class="AlonModule_Top2">
                  <ul> 
                  	<li ><a style="white-space: nowrap;" href="<%=basePath%>admin/vodPartAction_listVodPart.action?type=goListVodPart">影片管理</a></li>
-                      	<li><a style="white-space: nowrap;" href="<%=basePath%>ad/list.action">点播广告</a></li>
+                      	<li><a style="white-space: nowrap;" href="<%=basePath%>ad/list.action?showFlag=2&firstFlag=true">点播广告</a></li>
                       	<li class="currentHover"><a href="<%=basePath%>play/list.action">切换播放引擎</a></li>
+                      	<li><a href="<%=basePath%>movieSource/list.action">切换电影源</a></li>
                  </ul>
            </div>
            <div class="AlonModule_Top3"><img alt="" src="<%=basePath%>res/images/TopColumn3.png"/></div>
@@ -56,7 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    <th scope="col" width="22%" height="30" class="STYLE1" nowrap="nowrap" bgcolor="#EEEEEE" >操&nbsp;&nbsp;作</th>
 					  </tr>
 					  
-					 <s:form namespace="/play" action="play/list.action" method="post" id="delForm" cssClass="delForm">
+					 <s:form namespace="/play" action="list" method="post" id="delForm" cssClass="delForm">
 					  <s:iterator value="play" id="item" status="st">
 					  <tr id="otd">
 					   

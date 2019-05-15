@@ -76,7 +76,7 @@ var a = <%=session.getAttribute("language")%>
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post"  action="appCategoryDetail/list.action" namespace="/appCategoryDetail" id="searchForm" >           
+	           <s:form method="post"  action="list" namespace="/appCategoryDetail" id="searchForm" >           
 	           
 	           <div class="ProgramList_Search">
 	           		

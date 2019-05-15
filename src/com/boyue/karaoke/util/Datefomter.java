@@ -257,7 +257,7 @@ public class Datefomter {
             day.set(Calendar.SECOND, cal.get(Calendar.SECOND));
             gmt8 = day.getTime();
         } catch (Exception e) {
-            System.out.println("获取GMT8时间 getGMT8Time() error !");
+        //    System.out.println("获取GMT8时间 getGMT8Time() error !");
             e.printStackTrace();
             gmt8 = null;
         }

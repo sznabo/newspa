@@ -63,7 +63,7 @@ public class InitListener implements ServletContextListener {
 //		}
 //		contextEvent.getServletContext().setAttribute(Constants.VOD_MAX_VISIT_MAP, vodMaxMap);
 //		
-		startOnlineUserSanner();
+	//	startOnlineUserSanner();
 //		QuartzContext.getInstance().setContext(contextEvent.getServletContext());
 //		
 //		//启动检测自己在云端状态的线程

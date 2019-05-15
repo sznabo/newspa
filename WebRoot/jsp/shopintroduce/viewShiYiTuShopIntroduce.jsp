@@ -66,11 +66,11 @@ $(function(){
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="shopIntroduceAction_viewShiYiTu.action" namespace="/shopintroduce" method="post">
+	 <s:form action="shopIntroduceAction_viewShiYiTu" namespace="/shopintroduce" method="post">
      <div class="AlonModule_Body"  >
 		<table width="10%" class="listtable">
 		<ul>
-<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu.action" method="post" id="delForm" cssClass="delForm">
+<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu" method="post" id="delForm" cssClass="delForm">
 	<s:iterator value="pageBean.elements" id="item">
 	<li style="background-repeat:no-repeat;"><img src="${item.logo}" width="200" height="160"/><p><s:property value="name"/></p></li>
 
@@ -116,11 +116,11 @@ $(function(){
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="shopIntroduceAction_viewShiYiTu.action" namespace="/shopintroduce" method="post">
+	 <s:form action="shopIntroduceAction_viewShiYiTu" namespace="/shopintroduce" method="post">
      <div class="AlonModule_Body"  >
 		<table width="10%" class="listtable">
 		<ul>
-<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu.action" method="post" id="delForm" cssClass="delForm">
+<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu" method="post" id="delForm" cssClass="delForm">
 	<s:iterator value="pageBean.elements" id="item">
 	<li style="background-repeat:no-repeat;"><img src="${item.logo}" width="200" height="160"/><p><s:property value="name"/></p></li>
 

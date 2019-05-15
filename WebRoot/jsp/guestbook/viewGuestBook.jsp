@@ -109,7 +109,7 @@ function showLiveList() {
      </div>
 	 <div class="AlonModule_Body">
 	 <div class="AlonModule_list">
-	 <s:form action="guestBookAction_view.action" namespace="/guestbook" method="post">
+	 <s:form action="guestBookAction_view" namespace="/guestbook" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 		<s:hidden name="model.id" ></s:hidden>

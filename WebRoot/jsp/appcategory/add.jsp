@@ -110,7 +110,7 @@ function showLiveList() {
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list">
-	 <s:form action="appCategory/save.action" enctype="multipart/form-data" namespace="/appCategory" method="post">
+	 <s:form action="save" enctype="multipart/form-data" namespace="/appCategory" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 			<tr>

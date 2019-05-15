@@ -78,7 +78,7 @@ var a = <%=session.getAttribute("language")%>
      <div class="AlonModule_Body">
           <div class="AlonModule_list">
 	           
-	           <s:form action="servermsg/serverMsgAction_home.action" method="post" namespace="/servermsg">
+	           <s:form action="serverMsgAction_home" method="post" namespace="/servermsg">
 	           <div class="ProgramList_Search">
 	                         <div class="Search">
 	                         	&nbsp;&nbsp;标题<input type="text" name="model.title" style="margin-left:15px;"/>
@@ -105,7 +105,7 @@ var a = <%=session.getAttribute("language")%>
 					    <th scope="col" width="15%">操作</th>
 					  </tr>
 					  
-					<s:form action="servermsg/serverMsgAction_delByIDs.action" method="post" id="delForm">
+					<s:form action="serverMsgAction_delByIDs" namespace="/servermsg" method="post" id="delForm">
 					  <s:iterator value="pageBean.elements" id="item">
 					  <tr>
 					    <td class="check"><input type="checkbox" class="cls" name="idList" value="${item.id }"/></td>

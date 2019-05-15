@@ -50,6 +50,7 @@ import com.boyue.karaoke.model.LiveCategory;
 import com.boyue.karaoke.model.LiveManagement;
 import com.boyue.karaoke.model.MainAd;
 import com.boyue.karaoke.model.Message;
+import com.boyue.karaoke.model.MovieSource;
 import com.boyue.karaoke.model.Play;
 import com.boyue.karaoke.model.ServerMsg;
 import com.boyue.karaoke.model.ServerMsgDetail;
@@ -87,6 +88,7 @@ import com.boyue.karaoke.service.LiveApkService;
 import com.boyue.karaoke.service.LiveCategoryService;
 import com.boyue.karaoke.service.MainAdService;
 import com.boyue.karaoke.service.MessageService;
+import com.boyue.karaoke.service.MovieSourceService;
 import com.boyue.karaoke.service.PlayService;
 import com.boyue.karaoke.service.SingelLiveService;
 import com.boyue.karaoke.service.SoftUpdateTaskService;
@@ -124,6 +126,8 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 	
 	private static final Logger LOG = LogManager.getLogger(DeviceRemoteAction.class);
 	
+	@Autowired
+	private MovieSourceService movieSourceService;
 	@Autowired
 	private BigCatService bigCatService;
 	@Autowired
@@ -1611,6 +1615,18 @@ public class DeviceRemoteAction extends DefaultBaseAction {
 		bigCatService.updateStatus1();
 		
 	}
+	
+	public String getMovieSource() {
+	    List<MovieSource> m = this.movieSourceService.findAll();
+	    String num = null;
+	    for (MovieSource movieSource : m) {
+	      if (movieSource.getSource_state() == 1) {
+	        num = String.valueOf(movieSource.getId());
+	      }
+	    } 
+	    this.ajaxResponse.setMsgBody(num);
+	    return "global_ajax_response";
+	  }
 	
 	public Integer getParentId() {
 		return ParentId;

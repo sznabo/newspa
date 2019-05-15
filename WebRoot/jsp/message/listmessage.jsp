@@ -109,7 +109,7 @@ var a = <%=session.getAttribute("language")%>
 					    <th scope="col" width="15%">操作</th>
 					  </tr>
 					  
-					<s:form action="message/delmessageAction.action" method="post" id="delForm">
+					<s:form action="delmessageAction" namespace="/message" method="post" id="delForm">
 					  <s:iterator value="pageBean.elements" id="item">
 					  <tr>
 					    <td class="check"><input type="checkbox" class="cls" name="messageIdList" value="${item.id }"/></td>

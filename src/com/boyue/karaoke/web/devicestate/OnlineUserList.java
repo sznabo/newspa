@@ -32,7 +32,7 @@ public class OnlineUserList {
 	}
 	
 	public static synchronized void removeOnlineUser(String mac) {
-		System.out.println("把用户:" + mac +" 从在线列表中移除");
+	//	System.out.println("把用户:" + mac +" 从在线列表中移除");
 		ONLINE_USER_MAP.remove(mac);
 	}
 	

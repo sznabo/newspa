@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list" >
-	 <s:form action="liveCategory/select.action" namespace="/liveapk" method="post" enctype="multipart/form-data">
+	 <s:form action="update" namespace="/liveapk" method="post" enctype="multipart/form-data">
      <div class="AlonModule_Body">
 		<table width="40%" class="listtable">
 			<tr>

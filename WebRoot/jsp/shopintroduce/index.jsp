@@ -27,7 +27,7 @@ li:nth-child(6){top: 202px;left: 404px;}
 
 
 <ul>
-<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu.action" method="post" id="delForm" cssClass="delForm">
+<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu" method="post" id="delForm" cssClass="delForm">
 	<s:iterator value="pageBean.elements" id="item">
 	<li style="background-repeat:no-repeat;"><s:property value="name"/><img src="${item.logo}" width="200" height="100"/></li>
 <!-- 

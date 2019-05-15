@@ -113,7 +113,7 @@ var a = <%=session.getAttribute("language")%>
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post" action="shopIntroduceAction_home.action" namespace="/shopintroduce" id="searchForm" >
+	           <s:form method="post" action="shopIntroduceAction_home" namespace="/shopintroduce" id="searchForm" >
 	          <s:if test="#session.lv == 1">
 	          	<s:hidden name="model.lv" id="lv"></s:hidden>
 	          </s:if>

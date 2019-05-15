@@ -8,13 +8,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>bomb系统</title>
+<meta http-equiv="refresh" content="250">
+<title>纳博后台系统</title>
 <script language="JavaScript" src="<%=basePath%>res/js/jquery-1.8.3.min.js"></script>
 <script language="JavaScript" src="<%=basePath%>res/js/audioplayer.js"></script>
 <script language="JavaScript" src="<%=basePath%>res/js/main.js"></script>
 <script language="JavaScript" src="<%=basePath%>res/js/Bmob-1.7.0.min.js"></script>
 
 <script type="text/javascript">
+
+window.onload = function(){
+	             //屏蔽键盘事件
+	             document.onkeydown = function (){
+	                 var e = window.event || arguments[0];
+	                 //F12
+	                 if(e.keyCode == 123){
+	                    return false;
+	                 //Ctrl+Shift+I
+	                 }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+	                     return false;
+	                 //Shift+F10
+	                 }else if((e.shiftKey) && (e.keyCode == 121)){
+	                     return false;
+	                 //Ctrl+U
+	                 }else if((e.ctrlKey) && (e.keyCode == 85)){
+	                    return false;
+	                 }
+	             };
+	             //屏蔽鼠标右键
+	             document.oncontextmenu = function (){
+	                 return false;
+	             }
+	         }
+
 Bmob.initialize("ee3ce0d2e22ebcd70014ef30c7d5f9b3", "2967dd7a99f3166497b4110250e97fd2");
 
 $.ajax({
@@ -104,7 +130,7 @@ $.ajax({
 </head>
 <body>
 <h1 align="center">欢迎使用纳博水疗后台</h1>
-<h2 align="center"><a href="http://localhost:8793/newspa/">进入后台</a></h2>
+<h2 align="center"><a href="http://localhost:8793/newspa/" target="view_window">进入后台</a></h2>
 </body>
 </html>
 

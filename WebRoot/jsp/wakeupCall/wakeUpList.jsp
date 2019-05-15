@@ -49,7 +49,7 @@ function manage(id){
      <div class="AlonModule_Body">
           <div class="AlonModule_list">
 	           
-	           <s:form method="post" action="wakeUpAction_home.action" namespace="/wakeup">
+	           <s:form method="post" action="wakeUpAction_home" namespace="/wakeup">
 	           <div class="ProgramList_Search">
                       <div class="Search">
                            &nbsp;<input class="Sear" type="submit" value="查&nbsp;询" style="margin-left:10px;"/>

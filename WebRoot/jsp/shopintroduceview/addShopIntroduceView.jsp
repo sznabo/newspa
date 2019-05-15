@@ -86,7 +86,7 @@ function showLiveList() {
      </div>
 	 <div class="AlonModule_Body" style="overflow:hidden;">
 	 <div class="AlonModule_list">
-	 <s:form action="shopIntroduceAction_saveShopIntroduce.action" enctype="multipart/form-data" namespace="/shopintroduce" method="post">
+	 <s:form action="shopIntroduceAction_saveShopIntroduce" enctype="multipart/form-data" namespace="/shopintroduce" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 		<s:if test="#session.lv == 2">

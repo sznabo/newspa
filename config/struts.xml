@@ -190,6 +190,8 @@
 	<include file="strutsFiles/struts_customercase.xml"/>
 	<!-- 切换播放引擎 -->
 	<include file="strutsFiles/struts_play.xml"/>
+	<!-- 切换电影源 -->
+	<include file="strutsFiles/struts_movieSource.xml"/>
 	
 	
 	

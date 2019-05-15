@@ -83,7 +83,7 @@ public class VodVideoAction extends BaseAction implements ModelDriven<Vodvideo>{
 		} 
 		List<Criterion> params = new ArrayList<Criterion>();
 		if(model.getVodprogramid()!=null){
-			System.out.println(model.getVodprogramid());
+		//	System.out.println(model.getVodprogramid());
 			params.add(Restrictions.eq("vodprogramid",  this.getSessionAttr("curProgramId")));
 		}
 		if(model.getVoidname()!=null&&!model.getVoidname().trim().equals("")){

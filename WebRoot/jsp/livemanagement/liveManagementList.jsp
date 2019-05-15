@@ -85,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      </div>
      <div class="AlonModule_Body">
           <div class="AlonModule_list">               
-	           <s:form method="post" action="liveManagementAction_home.action" namespace="/live" id="searchForm" >
+	           <s:form method="post" action="liveManagementAction_home" namespace="/live" id="searchForm" >
 	           <div class="ProgramList_Search">
 	           		
 	                         <div class="Search">

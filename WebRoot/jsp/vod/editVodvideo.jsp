@@ -146,7 +146,7 @@ if(a==1){
      </div>
 	 <div class="AlonModule_Body">
 	 <div class="AlonModule_list">
-	 <s:form action="vodVideoAction_updateSave.action" namespace="/admin" method="post">
+	 <s:form action="vodVideoAction_updateSave" namespace="/admin" method="post">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 		<s:hidden name="vodprogramid" id="vodprogramid" value="%{model.vodprogramid}"></s:hidden>

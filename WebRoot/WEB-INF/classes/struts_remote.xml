@@ -221,6 +221,9 @@
 		<!-- 改变登录状态1-->
 		<action name="updateState_x1" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="updateState_x1">
 		</action>
+		<!-- 切换电影源（1.在线 2.本地）-->
+		<action name="getMovieSource" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="getMovieSource">
+		</action>
 		<action name="findIntroParentIsNull" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findIntroParentIsNull">
 		</action>
 		<action name="findsecondIntroByParentId" class="com.boyue.karaoke.web.mobileaction.DeviceRemoteAction" method="findsecondIntroByParentId">

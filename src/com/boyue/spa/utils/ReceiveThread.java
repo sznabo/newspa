@@ -45,7 +45,7 @@ public class ReceiveThread extends Thread {
 			socket.receive(datagramPacket);// receive是一个阻塞型的方法，没有接收到数据包之前会一直等待。 数据实际上就是存储到了byte的自己数组中了。
 
 			String backMes = new String(datagramPacket.getData(), "utf-8");
-			System.out.println("接收的数据：" + backMes);
+	//		System.out.println("接收的数据：" + backMes);
 
 			// 调用发送方法
 			ReceiveThread sddd=new ReceiveThread(port);

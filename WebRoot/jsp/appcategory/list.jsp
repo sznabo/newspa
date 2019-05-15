@@ -100,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post"  action="appCategory/list.action" namespace="/appCategory" id="searchForm" >           
+	           <s:form method="post"  action="list" namespace="/appCategory" id="searchForm" >           
 	           
 	           <div class="ProgramList_Search">
 	           		
@@ -135,7 +135,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    <th scope="col" width="22%" height="30" class="STYLE1" nowrap="nowrap" bgcolor="#EEEEEE" >操&nbsp;&nbsp;作</th>
 					  </tr>
 					  
-					 <s:form namespace="/appCategory" action="appCategory/delete.action" method="post" id="delForm" cssClass="delForm">
+					 <s:form namespace="/appCategory" action="delete" method="post" id="delForm" cssClass="delForm">
 					  <s:iterator value="pageBean.elements" id="item" status="st">
 					  <tr id="otd">
 					    <td class="check" width="2%"><input type="checkbox" class="checkCls" id="shopIntroduceId" name="idList" value="${id}"/></td>

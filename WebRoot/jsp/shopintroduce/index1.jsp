@@ -74,7 +74,7 @@ $(function(){
 <body>
 <!-- <p><input type="button" value="返&nbsp;回" class="Sear" style="margin-left:404px" onclick="window.location.href='shopintroduce/shopIntroduceAction_home.action'" /></p> -->
 <ul id="ul1" >
-<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu.action" method="post" id="delForm" cssClass="delForm">
+<s:form namespace="/shopintroduce" action="shopIntroduceAction_viewShiYiTu" method="post" id="delForm" cssClass="delForm">
 	
 	<s:iterator value="pageBean.elements" id="item">
 	<li style="background-repeat:no-repeat;"><img src="${item.logo}" width="200" height="160"/><p style="text-align: center;"><s:property value="name"/></p></li>

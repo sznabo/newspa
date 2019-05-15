@@ -99,7 +99,7 @@ public class BaseDAOImpl extends HibernateDaoSupport implements BaseDAO {
 	/** 加载满足条件的持久化对象 */
 	public Object loadObject(String hql) {
 		final String hql1 = hql;
-		System.out.println(hql1);
+	//	System.out.println(hql1);
 		Object obj = null;
 		List list = getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session)

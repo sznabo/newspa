@@ -136,7 +136,7 @@ if(a==1){
      </div>
 	 <div class="AlonModule_Body">
 	 <div class="AlonModule_list">
-	 <s:form action="vodPartAction_saveVodPart.action" namespace="/admin" method="post" enctype="multipart/form-data">
+	 <s:form action="vodPartAction_saveVodPart" namespace="/admin" method="post" enctype="multipart/form-data">
      <div class="AlonModule_Body">
 		<table width="98%" class="listtable">
 			<tr>

@@ -56,7 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    <th scope="col" width="22%" height="30" class="STYLE1" nowrap="nowrap" bgcolor="#EEEEEE" >操&nbsp;&nbsp;作</th>
 					  </tr>
 					  
-					 <s:form namespace="/liveCategory" action="liveCategory/list.action" method="post" id="delForm" cssClass="delForm">
+					 <s:form namespace="/liveCategory" action="list" method="post" id="delForm" cssClass="delForm">
 					  <s:iterator value="pageBean.elements" id="item" status="st">
 					  <tr id="otd">
 					   

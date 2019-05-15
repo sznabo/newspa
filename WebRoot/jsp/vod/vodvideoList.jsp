@@ -284,7 +284,7 @@ function selectAll() {
      	
           <div class="AlonModule_list">
 	                         
-	           <s:form method="post" action="admin/vodVideoAction_browseVodvideoByVodprogramID.action" namespace="/admin" id="searchForm">
+	           <s:form method="post" action="vodVideoAction_browseVodvideoByVodprogramID" namespace="/admin" id="searchForm">
 	           <div class="ProgramList_Search">
 	                         <div class="Search">
 	                          <div class="add_darImg1"></div>
@@ -306,7 +306,7 @@ function selectAll() {
 	                         </div>
 	           </div>
 	           </s:form>
-	           <s:form action="admin/vodVideoAction_macRead.action" namespace="/admin" method="post" enctype="multipart/form-data">
+	           <s:form action="vodVideoAction_macRead" namespace="/admin" method="post" enctype="multipart/form-data">
                   <input type="submit" class="right-button08" value="批量导入" onclick=" return macLead();" style="margin-left: 60px;margin-right:5px" />
 		  		    <s:file name="xls" id="xls" size="40"></s:file>
 		  		   <font style="color: red;size: 15px"><span id="error2"></span></font>
@@ -324,7 +324,7 @@ function selectAll() {
 						<th scope="col" width="15%" height="30" class="STYLE1" nowrap="nowrap" bgcolor="#EEEEEE"><div align="center">操作</div></th>		
 					  </tr>
 					  
-					 <s:form namespace="/admin" action="vodVideoAction_delVodvideo.action" method="post" id="delForm" cssClass="delForm">
+					 <s:form namespace="/admin" action="vodVideoAction_delVodvideo" method="post" id="delForm" cssClass="delForm">
 					  <s:iterator value="pageBean.elements" id="item" status="st">
 					  <tr id="otd">
 					    <!-- checkbox -->
